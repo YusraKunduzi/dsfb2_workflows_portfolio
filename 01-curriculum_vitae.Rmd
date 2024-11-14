@@ -1,14 +1,6 @@
----
-title: "Curriculum Vitae Yusra Kunduzi"
-output: html_document
-date: "2024-11-12"
----
+# Curriculum vitae
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-Over mij
+## Over mij
 
 Gemotiveerde Life Science studente met een interesse in de BLA BLA BLA.
 Brede kennis over moleculaire, biochemische en microbiologische laboratoriumtechnieken.
@@ -16,7 +8,7 @@ Altijd bereid om nieuwe vaardigheden te leren en kennis op te doen.
 
 ---
 
-Werkervaring
+## Werkervaring
 
 Medewerker schoonmaak, UMC en Randstad, Utrecht 		          
 September 2020 – September 2023
@@ -27,7 +19,7 @@ Dagelijks contact met klanten en het aanspreekpunt voor klantenservice.
 
 ---
 
-Opleiding
+## Opleiding
 Biologie en Medisch Laboratoriumonderzoek (Life Science), Hogescool Utrecht, Utrecht 		          
 September 2021 – Februari 2026
 -	Afstudeerrichting: microbiologie
@@ -40,6 +32,7 @@ September 2015 – Juli 2020
 -	Natuur en Gezondheid
 
 ---
+## Overig
 
 Vaardigheden
 •	Laboratoriumveiligheid

@@ -49,4 +49,7 @@ po/*~
 rsconnect/
 
 #Bookdown files
-bookdown_demo/*
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata

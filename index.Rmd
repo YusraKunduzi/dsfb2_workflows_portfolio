@@ -1,0 +1,15 @@
+---
+title: "Portfolio"
+author: "Yusra Kunduzi"
+site: bookdown::bookdown_site
+documentclass: book
+new_session: yes
+output:
+  bookdown::gitbook: default
+  
+---
+
+# Introductie
+
+Dit is het portfolio van Yusra Kunduzi bla bla bla intro.
+

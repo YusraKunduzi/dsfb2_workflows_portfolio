@@ -1,4 +1,4 @@
-# Het effect van transposons op biologische processen van de E. coli.
+# Het effect van transposons op biologische processen van de E. coli
  
 Voor mijn vrije opdracht wil ik het effect van transposons op bacteriën onderzoeken. Aangezien mijn afstudeerrichting microbiologie is, sluit dit onderwerp er goed bij aan. De ruwe data die ik zal gebruiken komt van GEO, onder de accession GSE197084. In dit onderzoek werd het effect van transposons op de virulentie van Escherichia coli bestudeerd. Het genoom van E. coli werd eerst gesequenced, waarna transposons werden geïntroduceerd. De gemuteerde bacteriën werden vervolgens geïmplanteerd in de hersenen, milt en longen van muizen om de effecten van de gemuteerde bacteriën in verschillende omgevingen te bestuderen. Na de infectie werden de bacteriën opnieuw gesequenced.
 

@@ -7,13 +7,16 @@ new_session: yes
 output:
   bookdown::gitbook: default
   html_document:
-    theme: cerulean
-    highlight: tango
-    toc: true
-    toc_depth: 2
+    
 ---
 
-# Introductie
 
-Dit is het portfolio van Yusra Kunduzi bla bla bla intro.
+# Portfolio van Yusra Kunduzi
 
+## Introductie
+
+Welkom bij mijn portfolio.
+
+# Inhoudsopgave
+
+\tableofcontents

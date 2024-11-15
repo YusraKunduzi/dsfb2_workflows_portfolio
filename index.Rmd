@@ -6,7 +6,11 @@ documentclass: book
 new_session: yes
 output:
   bookdown::gitbook: default
-  
+  html_document:
+    theme: cerulean
+    highlight: tango
+    toc: true
+    toc_depth: 2
 ---
 
 # Introductie

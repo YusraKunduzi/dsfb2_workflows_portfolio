@@ -1,6 +1,5 @@
 portfolio-van-yusra-kunduzi
 introductie
-inhoudsopgave
 curriculum-vitae---yusra-kunduzi
 over-mij
 werkervaring
@@ -8,3 +7,4 @@ opleiding
 overig
 het-effect-van-transposons-op-biologische-processen-van-de-e.-coli
 looking-ahead
+naam-van-hoofdstuk

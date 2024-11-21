@@ -17,6 +17,6 @@ output:
 
 Welkom bij mijn portfolio.
 
-# Inhoudsopgave
+
 
 \tableofcontents

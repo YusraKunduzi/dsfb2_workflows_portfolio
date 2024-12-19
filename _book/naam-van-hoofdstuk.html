@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Naam van hoofdstuk | Portfolio</title>
-  <meta name="description" content="5 Naam van hoofdstuk | Portfolio" />
+  <title>6 Naam van hoofdstuk | Portfolio</title>
+  <meta name="description" content="6 Naam van hoofdstuk | Portfolio" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Naam van hoofdstuk | Portfolio" />
+  <meta property="og:title" content="6 Naam van hoofdstuk | Portfolio" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Naam van hoofdstuk | Portfolio" />
+  <meta name="twitter:title" content="6 Naam van hoofdstuk | Portfolio" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="looking-ahead.html"/>
-
+<link rel="prev" href="guerrilla-analytics-on-daur2-course.html"/>
+<link rel="next" href="peer-review.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -148,7 +148,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="het-effect-van-transposons-op-biologische-processen-van-de-e.-coli.html"><a href="het-effect-van-transposons-op-biologische-processen-van-de-e.-coli.html"><i class="fa fa-check"></i><b>3</b> Het effect van transposons op biologische processen van de E. coli</a></li>
 <li class="chapter" data-level="4" data-path="looking-ahead.html"><a href="looking-ahead.html"><i class="fa fa-check"></i><b>4</b> Looking ahead</a></li>
-<li class="chapter" data-level="5" data-path="naam-van-hoofdstuk.html"><a href="naam-van-hoofdstuk.html"><i class="fa fa-check"></i><b>5</b> Naam van hoofdstuk</a></li>
+<li class="chapter" data-level="5" data-path="guerrilla-analytics-on-daur2-course.html"><a href="guerrilla-analytics-on-daur2-course.html"><i class="fa fa-check"></i><b>5</b> Guerrilla Analytics on DAUR2 course</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="guerrilla-analytics-on-daur2-course.html"><a href="guerrilla-analytics-on-daur2-course.html#directory-tree"><i class="fa fa-check"></i><b>5.1</b> Directory tree</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="naam-van-hoofdstuk.html"><a href="naam-van-hoofdstuk.html"><i class="fa fa-check"></i><b>6</b> Naam van hoofdstuk</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="naam-van-hoofdstuk.html"><a href="naam-van-hoofdstuk.html#analyzing-the-data"><i class="fa fa-check"></i><b>6.1</b> Analyzing the data</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="peer-review.html"><a href="peer-review.html"><i class="fa fa-check"></i><b>7</b> Peer review</a></li>
 </ul>
 
       </nav>
@@ -166,69 +174,155 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="naam-van-hoofdstuk" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Naam van hoofdstuk<a href="naam-van-hoofdstuk.html#naam-van-hoofdstuk" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A. Review the following Excel file in the ./data/CE.LIQ.FLOW.062_Tidydata.xlsx (it’s here), by opening the file in Excel. See if you can spot anything peculiar about this file. Do not edit the file in any way. Just close it when you are done. (Annoyingly, Excel asks you to save your changes, even if you did not touch anything in the file.)</p>
-<ul>
-<li>The file contains mostly metadata with columns repeating this type of data.</li>
-</ul>
-<p>B Open the file in R, using the {readxl} package.</p>
-<ul>
-<li>flow_tidy &lt;- read_excel(“ruwe_data/CE.LIQ.FLOW.062_Tidydata.xlsx”)
-View(flow_tidy)</li>
-</ul>
-<p>C Inspect the data types of columns RawData, compName and compConcentration. What types would you expect from the experimental description above. Have the data types been correctly assigned during the importing of the data into R?</p>
-<ul>
-<li>RawData is of the class ‘numeric’ and compName is ‘character’ which are both correct. CompConcentration is also of the class ‘character’ which is not correct. It should be numerical and this is the code to change it to the right class: flow_tidy<span class="math inline">\(compConcentration &lt;- as.numeric(flow_tidy\)</span>compConcentration)</li>
-</ul>
+<div id="naam-van-hoofdstuk" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Naam van hoofdstuk<a href="naam-van-hoofdstuk.html#naam-van-hoofdstuk" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>C:
+-</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="naam-van-hoofdstuk.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb1-2"><a href="naam-van-hoofdstuk.html#cb1-2" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="naam-van-hoofdstuk.html#cb1-3" tabindex="-1"></a>flow_tidy <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;ruwe_data/CE.LIQ.FLOW.062_Tidydata.xlsx&quot;</span>)</span></code></pre></div>
-<p>D Create a graph displaying a scatterplot for the CE.LIQ.FLOW.062_Tidydata.xlsx data, for the different compounds and the varying concentrations. Put the compConcentration on the x-axis, the DataRaw counts on the y-axis and assign a colour to each level in compName. Assign a different symbol (shape =) to each level in the expType variable. Try fixing the labels of the x-axis so that we can read them.</p>
+<p>í</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="naam-van-hoofdstuk.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb2-2"><a href="naam-van-hoofdstuk.html#cb2-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## ── Attaching core tidyverse packages ────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
 ## ✔ lubridate 1.9.3     ✔ tibble    3.2.1
 ## ✔ purrr     1.0.2     ✔ tidyr     1.3.1
-## ── Conflicts ──────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="naam-van-hoofdstuk.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb4-2"><a href="naam-van-hoofdstuk.html#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="naam-van-hoofdstuk.html#cb4-3" tabindex="-1"></a><span class="co"># Eindresultaat scatterplot:</span></span>
-<span id="cb4-4"><a href="naam-van-hoofdstuk.html#cb4-4" tabindex="-1"></a><span class="co">#  - x-as compconentration --&gt; goeie x-as labels</span></span>
-<span id="cb4-5"><a href="naam-van-hoofdstuk.html#cb4-5" tabindex="-1"></a><span class="co">#  - y-as rawdata counts </span></span>
-<span id="cb4-6"><a href="naam-van-hoofdstuk.html#cb4-6" tabindex="-1"></a><span class="co">#     - + kleur per level in compname</span></span>
-<span id="cb4-7"><a href="naam-van-hoofdstuk.html#cb4-7" tabindex="-1"></a><span class="co">#     - + andere shape per level in exptype</span></span>
-<span id="cb4-8"><a href="naam-van-hoofdstuk.html#cb4-8" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="naam-van-hoofdstuk.html#cb4-9" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="naam-van-hoofdstuk.html#cb4-10" tabindex="-1"></a><span class="co"># Change comconcentration into numeric column.</span></span>
-<span id="cb4-11"><a href="naam-van-hoofdstuk.html#cb4-11" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(flow_tidy<span class="sc">$</span>compConcentration)</span></code></pre></div>
+<span id="cb4-3"><a href="naam-van-hoofdstuk.html#cb4-3" tabindex="-1"></a><span class="co"># Change compName and expType into factors</span></span>
+<span id="cb4-4"><a href="naam-van-hoofdstuk.html#cb4-4" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compName <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>compName)</span>
+<span id="cb4-5"><a href="naam-van-hoofdstuk.html#cb4-5" tabindex="-1"></a>flow_tidy<span class="sc">$</span>expType <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>expType)</span>
+<span id="cb4-6"><a href="naam-van-hoofdstuk.html#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="naam-van-hoofdstuk.html#cb4-7" tabindex="-1"></a><span class="co"># Change compConcentration into numeric column</span></span>
+<span id="cb4-8"><a href="naam-van-hoofdstuk.html#cb4-8" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(flow_tidy<span class="sc">$</span>compConcentration)</span></code></pre></div>
 <pre><code>## Warning: NAs introduced by coercion</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="naam-van-hoofdstuk.html#cb6-1" tabindex="-1"></a><span class="co"># Change compname and exptype into factors</span></span>
-<span id="cb6-2"><a href="naam-van-hoofdstuk.html#cb6-2" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compName <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>compName)</span>
-<span id="cb6-3"><a href="naam-van-hoofdstuk.html#cb6-3" tabindex="-1"></a>flow_tidy<span class="sc">$</span>expType <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>expType)</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="naam-van-hoofdstuk.html#cb6-1" tabindex="-1"></a><span class="co"># Remove unnecessary columns</span></span>
+<span id="cb6-2"><a href="naam-van-hoofdstuk.html#cb6-2" tabindex="-1"></a>flow_tidy<span class="sc">$</span>plateRow <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb6-3"><a href="naam-van-hoofdstuk.html#cb6-3" tabindex="-1"></a>flow_tidy<span class="sc">$</span>plateColumn <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
 <span id="cb6-4"><a href="naam-van-hoofdstuk.html#cb6-4" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="naam-van-hoofdstuk.html#cb6-5" tabindex="-1"></a><span class="co"># Plot the data</span></span>
-<span id="cb6-6"><a href="naam-van-hoofdstuk.html#cb6-6" tabindex="-1"></a>flow_tidy_plot <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span> compConcentration, <span class="at">y=</span> RawData, <span class="at">colour =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p>E When creating the plot under C), what happened with the ordering of the x-axis labels. Explain why this happens. Look at the data-type of the compConcentration column in the data again to find a clue.</p>
-<p>F Correct this and than look at the graph again. Use a log10 transformation on the x-axis to get a clear graph. Also, add a bit of jitter to the points in the graph so that points are not overlapping (Google “ggplot jitter” if needed).</p>
-<p>Fill in: (G) The positive control for this experiments is ….. (H) The negative control for this experiment is …..</p>
-<p>I Think about how you would analyze this experiment to learn whether there is indeed an effect of different concentrations on offspring count and whether the different compounds have a different curve (IC50). Write down you analysis as a step-wise plan.</p>
+<span id="cb6-5"><a href="naam-van-hoofdstuk.html#cb6-5" tabindex="-1"></a><span class="co"># Filter out invalid rows (NA or zero values in RawData or compConcentration)</span></span>
+<span id="cb6-6"><a href="naam-van-hoofdstuk.html#cb6-6" tabindex="-1"></a>flow_tidy <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="naam-van-hoofdstuk.html#cb6-7" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(RawData), </span>
+<span id="cb6-8"><a href="naam-van-hoofdstuk.html#cb6-8" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(compConcentration), </span>
+<span id="cb6-9"><a href="naam-van-hoofdstuk.html#cb6-9" tabindex="-1"></a>         compConcentration <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb6-10"><a href="naam-van-hoofdstuk.html#cb6-10" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="naam-van-hoofdstuk.html#cb6-11" tabindex="-1"></a><span class="co"># Check if controlNegative is present</span></span>
+<span id="cb6-12"><a href="naam-van-hoofdstuk.html#cb6-12" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">unique</span>(flow_tidy<span class="sc">$</span>expType))</span></code></pre></div>
+<pre><code>## [1] experiment      controlPositive controlVehicleA
+## Levels: controlNegative controlPositive controlVehicleA experiment</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="naam-van-hoofdstuk.html#cb8-1" tabindex="-1"></a><span class="co"># Mean of controlNegative for normalization</span></span>
+<span id="cb8-2"><a href="naam-van-hoofdstuk.html#cb8-2" tabindex="-1"></a>control_negative_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(flow_tidy<span class="sc">$</span>RawData[flow_tidy<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-3"><a href="naam-van-hoofdstuk.html#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="naam-van-hoofdstuk.html#cb8-4" tabindex="-1"></a><span class="co"># Check if control_negative_mean is calculated correctly</span></span>
+<span id="cb8-5"><a href="naam-van-hoofdstuk.html#cb8-5" tabindex="-1"></a><span class="fu">print</span>(control_negative_mean)</span></code></pre></div>
+<pre><code>## [1] NaN</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="naam-van-hoofdstuk.html#cb10-1" tabindex="-1"></a><span class="co"># Add NormalizedData column (avoid division by zero)</span></span>
+<span id="cb10-2"><a href="naam-van-hoofdstuk.html#cb10-2" tabindex="-1"></a>flow_tidy <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="naam-van-hoofdstuk.html#cb10-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">NormalizedData =</span> <span class="fu">ifelse</span>(control_negative_mean <span class="sc">!=</span> <span class="dv">0</span>, RawData <span class="sc">/</span> control_negative_mean, <span class="cn">NA</span>))</span>
+<span id="cb10-4"><a href="naam-van-hoofdstuk.html#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="naam-van-hoofdstuk.html#cb10-5" tabindex="-1"></a><span class="co"># Calculate log10 of compConcentration (avoid log(0) issues)</span></span>
+<span id="cb10-6"><a href="naam-van-hoofdstuk.html#cb10-6" tabindex="-1"></a>flow_tidy <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb10-7"><a href="naam-van-hoofdstuk.html#cb10-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">logConcentration =</span> <span class="fu">ifelse</span>(compConcentration <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="fu">log10</span>(compConcentration), <span class="cn">NA</span>))</span>
+<span id="cb10-8"><a href="naam-van-hoofdstuk.html#cb10-8" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="naam-van-hoofdstuk.html#cb10-9" tabindex="-1"></a><span class="co"># Check for any remaining NAs</span></span>
+<span id="cb10-10"><a href="naam-van-hoofdstuk.html#cb10-10" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(flow_tidy<span class="sc">$</span>NormalizedData)))</span></code></pre></div>
+<pre><code>## [1] 324</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="naam-van-hoofdstuk.html#cb12-1" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(flow_tidy<span class="sc">$</span>logConcentration)))</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="naam-van-hoofdstuk.html#cb14-1" tabindex="-1"></a><span class="co"># Plot the data</span></span>
+<span id="cb14-2"><a href="naam-van-hoofdstuk.html#cb14-2" tabindex="-1"></a>flow_tidy_plot <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="naam-van-hoofdstuk.html#cb14-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> logConcentration, <span class="at">y =</span> NormalizedData, </span>
+<span id="cb14-4"><a href="naam-van-hoofdstuk.html#cb14-4" tabindex="-1"></a>             <span class="at">colour =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb14-5"><a href="naam-van-hoofdstuk.html#cb14-5" tabindex="-1"></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb14-6"><a href="naam-van-hoofdstuk.html#cb14-6" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb14-7"><a href="naam-van-hoofdstuk.html#cb14-7" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-8"><a href="naam-van-hoofdstuk.html#cb14-8" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;C.elegans nematodes exposed to varying concentrations of different compounds&quot;</span>, </span>
+<span id="cb14-9"><a href="naam-van-hoofdstuk.html#cb14-9" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Log10 of the concentration in nM&quot;</span>,</span>
+<span id="cb14-10"><a href="naam-van-hoofdstuk.html#cb14-10" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Normalized offspring count&quot;</span></span>
+<span id="cb14-11"><a href="naam-van-hoofdstuk.html#cb14-11" tabindex="-1"></a>  )</span>
+<span id="cb14-12"><a href="naam-van-hoofdstuk.html#cb14-12" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="naam-van-hoofdstuk.html#cb14-13" tabindex="-1"></a><span class="fu">print</span>(flow_tidy_plot)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="naam-van-hoofdstuk.html#cb15-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-2"><a href="naam-van-hoofdstuk.html#cb15-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb15-3"><a href="naam-van-hoofdstuk.html#cb15-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb15-4"><a href="naam-van-hoofdstuk.html#cb15-4" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="naam-van-hoofdstuk.html#cb15-5" tabindex="-1"></a><span class="co"># Change compname and exptype into factors</span></span>
+<span id="cb15-6"><a href="naam-van-hoofdstuk.html#cb15-6" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compName <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>compName)</span>
+<span id="cb15-7"><a href="naam-van-hoofdstuk.html#cb15-7" tabindex="-1"></a>flow_tidy<span class="sc">$</span>expType <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>expType)</span>
+<span id="cb15-8"><a href="naam-van-hoofdstuk.html#cb15-8" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="naam-van-hoofdstuk.html#cb15-9" tabindex="-1"></a><span class="co"># Change compconcentration into numeric column.</span></span>
+<span id="cb15-10"><a href="naam-van-hoofdstuk.html#cb15-10" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(flow_tidy<span class="sc">$</span>compConcentration)</span>
+<span id="cb15-11"><a href="naam-van-hoofdstuk.html#cb15-11" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="naam-van-hoofdstuk.html#cb15-12" tabindex="-1"></a><span class="co"># Remove rows with NA</span></span>
+<span id="cb15-13"><a href="naam-van-hoofdstuk.html#cb15-13" tabindex="-1"></a>flow_tidy<span class="sc">$</span>plateRow <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb15-14"><a href="naam-van-hoofdstuk.html#cb15-14" tabindex="-1"></a>flow_tidy<span class="sc">$</span>plateColumn <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb15-15"><a href="naam-van-hoofdstuk.html#cb15-15" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="naam-van-hoofdstuk.html#cb15-16" tabindex="-1"></a><span class="co"># Mean of control negative for normalization of data</span></span>
+<span id="cb15-17"><a href="naam-van-hoofdstuk.html#cb15-17" tabindex="-1"></a>control_negative_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(flow_tidy<span class="sc">$</span>RawData[flow_tidy<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-18"><a href="naam-van-hoofdstuk.html#cb15-18" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="naam-van-hoofdstuk.html#cb15-19" tabindex="-1"></a><span class="co"># New column with normalized data</span></span>
+<span id="cb15-20"><a href="naam-van-hoofdstuk.html#cb15-20" tabindex="-1"></a>flow_tidy <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb15-21"><a href="naam-van-hoofdstuk.html#cb15-21" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">NormalizedData =</span> RawData <span class="sc">/</span> control_negative_mean)</span>
+<span id="cb15-22"><a href="naam-van-hoofdstuk.html#cb15-22" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="naam-van-hoofdstuk.html#cb15-23" tabindex="-1"></a><span class="co">#take the log10 value of the compConcentration</span></span>
+<span id="cb15-24"><a href="naam-van-hoofdstuk.html#cb15-24" tabindex="-1"></a>flow_tidy<span class="sc">$</span>logConcentration <span class="ot">&lt;-</span>  <span class="fu">log</span>(flow_tidy<span class="sc">$</span>compConcentration, <span class="at">base =</span> <span class="dv">10</span>)</span>
+<span id="cb15-25"><a href="naam-van-hoofdstuk.html#cb15-25" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="naam-van-hoofdstuk.html#cb15-26" tabindex="-1"></a><span class="co"># Plot the data</span></span>
+<span id="cb15-27"><a href="naam-van-hoofdstuk.html#cb15-27" tabindex="-1"></a>flow_tidy_plot <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span> logConcentration, <span class="at">y=</span> NormalizedData, </span>
+<span id="cb15-28"><a href="naam-van-hoofdstuk.html#cb15-28" tabindex="-1"></a>                  <span class="at">colour=</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb15-29"><a href="naam-van-hoofdstuk.html#cb15-29" tabindex="-1"></a>                    <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb15-30"><a href="naam-van-hoofdstuk.html#cb15-30" tabindex="-1"></a>                      <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb15-31"><a href="naam-van-hoofdstuk.html#cb15-31" tabindex="-1"></a>                        <span class="fu">labs</span>(</span>
+<span id="cb15-32"><a href="naam-van-hoofdstuk.html#cb15-32" tabindex="-1"></a>                          <span class="at">title =</span> <span class="st">&quot;C.elegans nematodes exposed to varying concentrations of different compounds&quot;</span>, </span>
+<span id="cb15-33"><a href="naam-van-hoofdstuk.html#cb15-33" tabindex="-1"></a>                          <span class="at">x=</span> <span class="st">&quot;Log10 of the concentration in nM&quot;</span>,</span>
+<span id="cb15-34"><a href="naam-van-hoofdstuk.html#cb15-34" tabindex="-1"></a>                          <span class="at">y=</span> <span class="st">&quot;Normalized offspring count&quot;</span>)</span>
+<span id="cb15-35"><a href="naam-van-hoofdstuk.html#cb15-35" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="naam-van-hoofdstuk.html#cb15-36" tabindex="-1"></a><span class="fu">print</span>(flow_tidy_plot)</span></code></pre></div>
+<pre><code>## Warning in min(x): no non-missing arguments to min; returning Inf</code></pre>
+<pre><code>## Warning in max(x): no non-missing arguments to max; returning -Inf</code></pre>
+<pre><code>## Warning in min(d[d &gt; tolerance]): no non-missing arguments to min; returning
+## Inf</code></pre>
+<pre><code>## Warning in min(x): no non-missing arguments to min; returning Inf</code></pre>
+<pre><code>## Warning in max(x): no non-missing arguments to max; returning -Inf</code></pre>
+<pre><code>## Warning in stats::runif(length(x), -amount, amount): NAs produced</code></pre>
+<pre><code>## Warning: Removed 324 rows containing missing values or values outside the scale range
+## (`geom_point()`).</code></pre>
+<p><img src="_main_files/figure-html/scatterplot-1.png" width="672" /></p>
+<p>RawData is of the class ‘numeric’ and compName is ‘character’ which are both correct. CompConcentration is also of the class ‘character’ which is not correct, it should be numerical.</p>
+<p>The concentration of the compounds has a wide range which isn’t good for visualisation in the scatterplot. To solve this problem, the log10 value of the compConcentration is used to make the scatterplot to reduce the datapoint being very far apart. Another problem could be that the Compconcentration is of the class “character” which disrupts the order in which the data is displayed.</p>
+<ul>
+<li>The positive control for this experiments is Ethanol. (H) The negative control for this experiment is S-medium.</li>
+</ul>
+<div id="analyzing-the-data" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Analyzing the data<a href="naam-van-hoofdstuk.html#analyzing-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If this experiment is analyzed to determine if there is an effect of different concentrations on offspring count and whether the compounds have varying effects, the following steps should be followed:</p>
+<p>Preparation of the Data:
+First, the data should be imported from the Excel file into RStudio to prepare it for analysis. During this process, columns should be assigned the correct data types, NA values should be removed, and the data should be normalized. Specifically, normalization should ensure that the mean value of the negative control is equal to 1, with all other values expressed as fractions of the negative control. This step is essential for comparing the effects of different compounds consistently.</p>
+<p>Visualization of the Data with a Scatterplot:
+This step is important for identifying potential issues with the data and making any necessary adjustments. It allows you to visualize the relationship between compound concentrations and offspring count. Use the compound concentration on the X-axis and the offspring count (RawData) on the Y-axis, with different colors representing each compound and different shapes representing the experimental types. Jitter can be applied to prevent overlapping data points.</p>
+<p>Dose-Response Curve (DRC):
+To better analyze the effects of the compounds on C. elegans and assess the relationship between dose and response, a DRC is necessary. This involves fitting a dose-response model using the {drc} package in R. Use the log-transformed compound concentration on the X-axis and the offspring count (RawData) on the Y-axis. The DRC will help quantify key parameters such as the IC50 value, as well as the minimal and maximal response levels.</p>
+<p>Analysis/Conclusion of the DRC:
+The analysis should focus on determining the IC50 value for each compound, identifying the minimal and maximal concentrations affecting C. elegans, and comparing the dose-response curves to evaluate differences in compound effects. Controls should be used to validate the experimental results.</p>
 <p>J Normalize the data for the controlNegative in such a way that the mean value for controlNegative is exactly equal to 1 and that all other values are expressed as a fraction thereof. Rerun your graphs with the normalized data.</p>
 <p>K Why would you want to take the step under J?</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="looking-ahead.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="guerrilla-analytics-on-daur2-course.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="peer-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -282,20 +376,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

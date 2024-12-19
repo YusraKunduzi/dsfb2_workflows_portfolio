@@ -6,8 +6,7 @@ documentclass: book
 new_session: yes
 output:
   bookdown::gitbook: default
-  html_document:
-    
+  html_document: default
 ---
 
 

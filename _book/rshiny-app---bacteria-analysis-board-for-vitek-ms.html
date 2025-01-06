@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | _main.knit</title>
+  <title>8 Rshiny app - Bacteria Analysis Board for VITEK® MS | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | _main.knit" />
+  <meta property="og:title" content="8 Rshiny app - Bacteria Analysis Board for VITEK® MS | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | _main.knit" />
+  <meta name="twitter:title" content="8 Rshiny app - Bacteria Analysis Board for VITEK® MS | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="peer-review.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -186,19 +186,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="rshiny-app---bacteria-analysis-board-for-vitek-ms" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Rshiny app - Bacteria Analysis Board for VITEK® MS<a href="rshiny-app---bacteria-analysis-board-for-vitek-ms.html#rshiny-app---bacteria-analysis-board-for-vitek-ms" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The VITEK MS is a machine commonly used in clinical microbiology for the identification of yeasts, bacteria, and their antibiotic resistance or sensitivity. This mass spectrometry system utilizes biochemical tests to distinguish between bacterial species based on their distinct responses to a series of chemical reactions.<span class="citation">(De Respinis et al. 2014)</span>
+The process begins by inserting a bacterial solution along with an identification or antibiotics card into the VITEK MS system. Each card contains a set of biochemical tests specific to the bacteria being analyzed. As the bacterial solution is drawn through the card, the system measures the extinction values corresponding to each test, indicating the bacteria’s reaction to the biochemical compounds. Each species has a unique pattern of extinction values, allowing the VITEK MS to accurately identify them based on their specific response patterns.</p>
+<p>While the VITEK MS is efficient and has a large database for identifying a wide range of organisms, it does have limitations. One of the main challenges is distinguishing closely related bacterial species that exhibit similar biochemical response patterns. For example, Streptococcus mitis and Streptococcus oralis, both Gram-positive bacteria, are often difficult to differentiate using the VITEK system alone. Their biochemical reaction patterns are so similar that the system frequently produces a combined result, indicating both species are present, rather than providing a definitive identification. This issue also occurs with the MALDI-TOF MS system, which, despite its large database, struggles to differentiate between these closely related species due to their highly similar protein profiles. <span class="citation">(Han, Jeong, and Choi 2021)</span></p>
+<p>Our project aims to address this limitation by investigating the differences in extinction patterns between S. mitis and S. oralis using the VITEK MS data. Through detailed analysis of the extinction outcomes from the biochemical tests on the Gram-positive cards, we aim to identify even the slightest differences between these two species. By leveraging advanced data analysis techniques, we will develop an application or website where users can input their VITEK extinction data files. These files will then be processed through custom scripts that allow users to visualize and interpret the data more effectively.</p>
+<p>The core functionality of the Rshiny app will include the ability to generate visualizations such as scatterplots, boxplots, heatmaps, and Principal Component Analysis (PCA) plots <span class="citation">(Yan et al. 2020)</span>. These tools will help users better understand how their samples compare across different tests. The primary goal is to provide a more accurate and detailed view of the subtle differences between closely related bacteria like S. mitis and S. oralis. For instance, scatterplots will allow users to see how individual tests correlate, while heatmaps will highlight patterns of bacterial response across all tests. PCA plots will help users observe the overall distribution of their samples, making it easier to spot any clustering or outliers that may indicate different bacterial species.</p>
+<p>Already, some differences have been observed in the extinction patterns of certain tests between S. mitis and S. oralis. These findings have led to the development of a new feature for the Rshiny app: a Mitis/Oralis Checker. This tool will allow users to input their VITEK data and receive a more straightforward answer regarding whether they are dealing with S. mitis or S. oralis. The checker will be based on the identified patterns from the biochemical tests and will use the data from the visualizations as a reference. While the checker provides a quick and user-friendly solution, users will still have the option to view the detailed plots and analyses to understand the basis of the checker’s conclusions.</p>
+<p>For now, the app will support any bacteria tested with the Gram-positive card, ensuring that a wide range of samples can be analyzed. This tool has the potential to improve bacterial identification accuracy in clinical microbiology by providing more precise results, especially in cases where traditional systems like the VITEK MS may fall short. Ultimately, our project aims to enhance the ability to distinguish between similar bacterial species.</p>
+<p>Because the Rshiny app is already set up for Gram-positive identification cards, adding the information and tests for a Gram-negative card would not be difficult <span class="citation">(Tanaka and Weisblum 1975)</span>. Researching and obtaining data from other bacteria that are difficult to distinguish would be helpful in developing additional checkers, like the Mitis/Oralis checker. Although these additions would be valuable, they are outside the scope of the current project and could be explored in future projects.</p>
+
+<hr />
+<p>bibliography: My_Library.bib</p>
+<hr />
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="peer-review.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

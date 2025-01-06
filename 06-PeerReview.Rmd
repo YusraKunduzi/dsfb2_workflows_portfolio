@@ -1,10 +1,5 @@
 # Peer review
 
----
-title: "Open Peer Review"
-author: "Yusra Kunduzi"
----
-
 ```{r}
 # Making the data frame
 peerreview <- data.frame(

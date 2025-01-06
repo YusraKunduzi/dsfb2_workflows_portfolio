@@ -1,6 +1,6 @@
 # C. elegans plate experiment
 
-```{r, Loading the data, warning = FALSE, message = FALSE}
+```{r, Loading the data, warning = FALSE, message = FALSE, echo=FALSE}
 library(readxl)
 library(ggplot2)
 library(tidyverse)
@@ -11,7 +11,7 @@ write.csv(flow_tidy, "flow_tidy.csv", row.names = FALSE)
 ```
 
 
-```{r, scatterplot, warning = FALSE}
+```{r, scatterplot, warning = FALSE, echo=FALSE}
 
 # Change compName and expType into factors
 flow_tidy$compName <- as.factor(flow_tidy$compName)

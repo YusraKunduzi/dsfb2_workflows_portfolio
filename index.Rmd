@@ -1,21 +1,12 @@
 ---
-title: "Portfolio"
-author: "Yusra Kunduzi"
 site: bookdown::bookdown_site
 documentclass: book
 new_session: yes
 output:
   bookdown::gitbook: default
   html_document: default
+bibliography: My_Library.bib
 ---
+# Portfolio of Yusra Kunduzi
 
-
-# Portfolio van Yusra Kunduzi
-
-## Introductie
-
-Welkom bij mijn portfolio.
-
-
-
-\tableofcontents
+Welcome to my portfolio. This portfolio was created by following the assignments of the Data Science Workflows course of the minor Data Science For Biology.

@@ -1,5 +1,8 @@
 # C. elegans plate experiment
 
+In this experiment, C. elegans nematodes were exposed to varying concentrations of different compounds. The dataset, provided by J. Louter, includes key variables such as the number of offspring (RawData), compound names (compName), concentrations (compConcentration), and experimental types (expType). The aim of the analysis was to create visualizations using ggplot2 and outline the steps for performing a dose-response analysis to assess the relationship between compound concentrations and offspring count.
+
+
 ```{r, Loading the data, warning = FALSE, message = FALSE, echo=FALSE}
 library(readxl)
 library(ggplot2)
@@ -11,30 +14,30 @@ write.csv(flow_tidy, "flow_tidy.csv", row.names = FALSE)
 ```
 
 
-```{r, scatterplot, warning = FALSE, echo=FALSE}
+```{r, scatterplot, warning = FALSE, echo=TRUE}
 
-# Change compName and expType into factors
+#change compName and expType into factors
 flow_tidy$compName <- as.factor(flow_tidy$compName)
 flow_tidy$expType <- as.factor(flow_tidy$expType)
 
-# Change compConcentration into numeric column
+#change compConcentration into numeric column
 flow_tidy$compConcentration <- as.numeric(flow_tidy$compConcentration)
 
-# Remove rows with NA in RawData
+#remove rows with NA in RawData
 flow_tidy <- flow_tidy %>%
   filter(!is.na(RawData))
 
-# Mean of controlNegative for normalization of data
+#mean of controlNegative for normalization of data
 control_negative_mean <- mean(flow_tidy$RawData[flow_tidy$expType == "controlNegative"], na.rm = TRUE)
 
-# New column with normalized data (normalized to the controlNegative mean)
+#new column with normalized data (normalized to the controlNegative mean)
 flow_tidy <- flow_tidy %>%
   mutate(NormalizedData = RawData / control_negative_mean)
 
-# Take the log10 value of compConcentration for better scale representation
+#take the log10 value of compConcentration
 flow_tidy$logConcentration <- log10(flow_tidy$compConcentration)
 
-# Plot the data with jitter to avoid overlapping points and color by compName
+#plot the data with jitter to avoid overlapping points and color by compName
 flow_tidy_plot <- flow_tidy %>%
   ggplot(aes(x = logConcentration, y = NormalizedData, 
              colour = compName, shape = expType)) +
@@ -45,10 +48,13 @@ flow_tidy_plot <- flow_tidy %>%
     y = "Normalized Offspring Count"
   )
 
-# Print the plot
 print(flow_tidy_plot)
 
 ```
+
+*Figure 3: Scatterplot showing the effect of different compounds at various concentrations on C. elegans offspring*
+
+
 The concentration of the compounds have a wide range, which isn’t ideal for visualization in the scatterplot. To solve this, the log10 value of compConcentration is used, reducing the distance between data points. Another issue is that compConcentration being of the class 'character' disrupts the order in which the data is displayed.
 
 RawData is of class 'numeric', which is correct. compName and expType were both initially of class 'character' and have been changed to 'factor'. compConcentration was of class 'character', but changed to 'numeric'.
@@ -61,14 +67,14 @@ Normalizing the data gives a baseline for comparison, reducing variability. This
 ## Analyzing the data
 If this experiment is analyzed to determine if there is an effect of different concentrations on offspring count and whether the compounds have varying effects, the following steps should be followed:
 
-**Preparation of the Data:**
+**1: Preparation of the Data:**
 First, the data should be imported from the Excel file into RStudio to prepare it for analysis. During this process, columns should be assigned the correct data types, NA values should be removed, and the data should be normalized. Specifically, normalization should ensure that the mean value of the negative control is equal to 1, with all other values expressed as fractions of the negative control. This step is essential for comparing the effects of different compounds consistently.
 
-**Visualization of the Data with a Scatterplot:**
+**2: Visualization of the Data with a Scatterplot:**
 This step is important for identifying potential issues with the data and making any necessary adjustments. It allows you to visualize the relationship between compound concentrations and offspring count. Use the compound concentration on the X-axis and the offspring count (RawData) on the Y-axis, with different colors representing each compound and different shapes representing the experimental types. Jitter can be applied to prevent overlapping data points.
 
-**Dose-Response Curve (DRC):**
+**3: Dose-Response Curve (DRC):**
 To better analyze the effects of the compounds on C. elegans and assess the relationship between dose and response, a DRC is necessary. This involves fitting a dose-response model using the {drc} package in R. Use the log-transformed compound concentration on the X-axis and the offspring count (RawData) on the Y-axis. The DRC will help quantify key parameters such as the IC50 value, as well as the minimal and maximal response levels.
 
-**Analysis/Conclusion of the DRC:**
+**4: Analysis/Conclusion of the DRC:**
 The analysis should focus on determining the IC50 value for each compound, identifying the minimal and maximal concentrations affecting C. elegans, and comparing the dose-response curves to evaluate differences in compound effects. Controls should be used to validate the experimental results.

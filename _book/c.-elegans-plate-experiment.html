@@ -190,21 +190,56 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="c.-elegans-plate-experiment" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">6</span> C. elegans plate experiment<a href="c.-elegans-plate-experiment.html#c.-elegans-plate-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="_main_files/figure-html/scatterplot-1.png" width="672" />
-The concentration of the compounds have a wide range, which isn’t ideal for visualization in the scatterplot. To solve this, the log10 value of compConcentration is used, reducing the distance between data points. Another issue is that compConcentration being of the class ‘character’ disrupts the order in which the data is displayed.</p>
+<p>In this experiment, C. elegans nematodes were exposed to varying concentrations of different compounds. The dataset, provided by J. Louter, includes key variables such as the number of offspring (RawData), compound names (compName), concentrations (compConcentration), and experimental types (expType). The aim of the analysis was to create visualizations using ggplot2 and outline the steps for performing a dose-response analysis to assess the relationship between compound concentrations and offspring count.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="c.-elegans-plate-experiment.html#cb1-1" tabindex="-1"></a><span class="co">#change compName and expType into factors</span></span>
+<span id="cb1-2"><a href="c.-elegans-plate-experiment.html#cb1-2" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compName <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>compName)</span>
+<span id="cb1-3"><a href="c.-elegans-plate-experiment.html#cb1-3" tabindex="-1"></a>flow_tidy<span class="sc">$</span>expType <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(flow_tidy<span class="sc">$</span>expType)</span>
+<span id="cb1-4"><a href="c.-elegans-plate-experiment.html#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="c.-elegans-plate-experiment.html#cb1-5" tabindex="-1"></a><span class="co">#change compConcentration into numeric column</span></span>
+<span id="cb1-6"><a href="c.-elegans-plate-experiment.html#cb1-6" tabindex="-1"></a>flow_tidy<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(flow_tidy<span class="sc">$</span>compConcentration)</span>
+<span id="cb1-7"><a href="c.-elegans-plate-experiment.html#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="c.-elegans-plate-experiment.html#cb1-8" tabindex="-1"></a><span class="co">#remove rows with NA in RawData</span></span>
+<span id="cb1-9"><a href="c.-elegans-plate-experiment.html#cb1-9" tabindex="-1"></a>flow_tidy <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb1-10"><a href="c.-elegans-plate-experiment.html#cb1-10" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(RawData))</span>
+<span id="cb1-11"><a href="c.-elegans-plate-experiment.html#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="c.-elegans-plate-experiment.html#cb1-12" tabindex="-1"></a><span class="co">#mean of controlNegative for normalization of data</span></span>
+<span id="cb1-13"><a href="c.-elegans-plate-experiment.html#cb1-13" tabindex="-1"></a>control_negative_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(flow_tidy<span class="sc">$</span>RawData[flow_tidy<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-14"><a href="c.-elegans-plate-experiment.html#cb1-14" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="c.-elegans-plate-experiment.html#cb1-15" tabindex="-1"></a><span class="co">#new column with normalized data (normalized to the controlNegative mean)</span></span>
+<span id="cb1-16"><a href="c.-elegans-plate-experiment.html#cb1-16" tabindex="-1"></a>flow_tidy <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb1-17"><a href="c.-elegans-plate-experiment.html#cb1-17" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">NormalizedData =</span> RawData <span class="sc">/</span> control_negative_mean)</span>
+<span id="cb1-18"><a href="c.-elegans-plate-experiment.html#cb1-18" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="c.-elegans-plate-experiment.html#cb1-19" tabindex="-1"></a><span class="co">#take the log10 value of compConcentration</span></span>
+<span id="cb1-20"><a href="c.-elegans-plate-experiment.html#cb1-20" tabindex="-1"></a>flow_tidy<span class="sc">$</span>logConcentration <span class="ot">&lt;-</span> <span class="fu">log10</span>(flow_tidy<span class="sc">$</span>compConcentration)</span>
+<span id="cb1-21"><a href="c.-elegans-plate-experiment.html#cb1-21" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="c.-elegans-plate-experiment.html#cb1-22" tabindex="-1"></a><span class="co">#plot the data with jitter to avoid overlapping points and color by compName</span></span>
+<span id="cb1-23"><a href="c.-elegans-plate-experiment.html#cb1-23" tabindex="-1"></a>flow_tidy_plot <span class="ot">&lt;-</span> flow_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb1-24"><a href="c.-elegans-plate-experiment.html#cb1-24" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> logConcentration, <span class="at">y =</span> NormalizedData, </span>
+<span id="cb1-25"><a href="c.-elegans-plate-experiment.html#cb1-25" tabindex="-1"></a>             <span class="at">colour =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb1-26"><a href="c.-elegans-plate-experiment.html#cb1-26" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-27"><a href="c.-elegans-plate-experiment.html#cb1-27" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-28"><a href="c.-elegans-plate-experiment.html#cb1-28" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;C.elegans Nematodes Exposed to Varying Concentrations of Different Compounds&quot;</span>, </span>
+<span id="cb1-29"><a href="c.-elegans-plate-experiment.html#cb1-29" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Log10 of the Concentration in nM&quot;</span>,</span>
+<span id="cb1-30"><a href="c.-elegans-plate-experiment.html#cb1-30" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Normalized Offspring Count&quot;</span></span>
+<span id="cb1-31"><a href="c.-elegans-plate-experiment.html#cb1-31" tabindex="-1"></a>  )</span>
+<span id="cb1-32"><a href="c.-elegans-plate-experiment.html#cb1-32" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="c.-elegans-plate-experiment.html#cb1-33" tabindex="-1"></a><span class="fu">print</span>(flow_tidy_plot)</span></code></pre></div>
+<p><img src="_main_files/figure-html/scatterplot-1.png" width="672" /></p>
+<p><em>Figure 3: Scatterplot showing the effect of different compounds at various concentrations on C. elegans offspring</em></p>
+<p>The concentration of the compounds have a wide range, which isn’t ideal for visualization in the scatterplot. To solve this, the log10 value of compConcentration is used, reducing the distance between data points. Another issue is that compConcentration being of the class ‘character’ disrupts the order in which the data is displayed.</p>
 <p>RawData is of class ‘numeric’, which is correct. compName and expType were both initially of class ‘character’ and have been changed to ‘factor’. compConcentration was of class ‘character’, but changed to ‘numeric’.</p>
 <p>The positive control for this experiment is Ethanol. The negative control for this experiment is S-medium.</p>
 <p>Normalizing the data gives a baseline for comparison, reducing variability. This makes it easier to spot meaningful differences by ensuring that any changes are due to the experimental conditions, not just natural differences in the data.</p>
 <div id="analyzing-the-data" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Analyzing the data<a href="c.-elegans-plate-experiment.html#analyzing-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If this experiment is analyzed to determine if there is an effect of different concentrations on offspring count and whether the compounds have varying effects, the following steps should be followed:</p>
-<p><strong>Preparation of the Data:</strong>
+<p><strong>1: Preparation of the Data:</strong>
 First, the data should be imported from the Excel file into RStudio to prepare it for analysis. During this process, columns should be assigned the correct data types, NA values should be removed, and the data should be normalized. Specifically, normalization should ensure that the mean value of the negative control is equal to 1, with all other values expressed as fractions of the negative control. This step is essential for comparing the effects of different compounds consistently.</p>
-<p><strong>Visualization of the Data with a Scatterplot:</strong>
+<p><strong>2: Visualization of the Data with a Scatterplot:</strong>
 This step is important for identifying potential issues with the data and making any necessary adjustments. It allows you to visualize the relationship between compound concentrations and offspring count. Use the compound concentration on the X-axis and the offspring count (RawData) on the Y-axis, with different colors representing each compound and different shapes representing the experimental types. Jitter can be applied to prevent overlapping data points.</p>
-<p><strong>Dose-Response Curve (DRC):</strong>
+<p><strong>3: Dose-Response Curve (DRC):</strong>
 To better analyze the effects of the compounds on C. elegans and assess the relationship between dose and response, a DRC is necessary. This involves fitting a dose-response model using the {drc} package in R. Use the log-transformed compound concentration on the X-axis and the offspring count (RawData) on the Y-axis. The DRC will help quantify key parameters such as the IC50 value, as well as the minimal and maximal response levels.</p>
-<p><strong>Analysis/Conclusion of the DRC:</strong>
+<p><strong>4: Analysis/Conclusion of the DRC:</strong>
 The analysis should focus on determining the IC50 value for each compound, identifying the minimal and maximal concentrations affecting C. elegans, and comparing the dose-response curves to evaluate differences in compound effects. Controls should be used to validate the experimental results.</p>
 
 </div>

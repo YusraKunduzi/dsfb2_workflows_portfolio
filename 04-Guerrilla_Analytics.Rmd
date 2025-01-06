@@ -1,6 +1,12 @@
 # Guerrilla Analytics on DAUR2 course
 
-![Directory tree](images/directorytree1.png)
-![Directory tree](images/directorytree2.png)
-![Directory tree](images/directorytree3.png)
+Guerrilla analytics is an approach to data management and analysis that focuses on efficiency, simplicity, and speed. It prioritizes creating practical workflows and making fast, effective choices with the available resources.
 
+For my DAUR-II RNA sequencing and metagenomics assignments, I applied guerrilla analytics by reorganizing my project structure to optimize data management. I focused on keeping essential files well-organized, removed unnecessary large datasets, and provided clear documentation in readme.txt files. I visualized the folder structure using the {fs} package in R, as shown in the figure below, to make the project more organized and easier to navigate.
+
+![](images/directorytree1.png)
+![](images/directorytree2.png)
+![](images/directorytree3.png)
+
+
+Figure 1: Directory tree of the DAUR2 course.

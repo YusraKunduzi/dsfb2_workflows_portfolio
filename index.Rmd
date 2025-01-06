@@ -1,4 +1,6 @@
 ---
+title: Portfolio of Yusra Kunduzi
+date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 new_session: yes
@@ -7,6 +9,8 @@ output:
   html_document: default
 bibliography: My_Library.bib
 ---
-# Portfolio of Yusra Kunduzi
 
-Welcome to my portfolio. This portfolio was created by following the assignments of the Data Science Workflows course of the minor Data Science For Biology.
+
+# Introduction
+
+Welcome to my GitHub Pages portfolio! This portfolio is created based on assignments from the Data Science Workflows course and projects from the minor in Data Science for Biology. In this portfolio, you can find a variety of things I’ve learned and created, such as an R package and examples of my usual work in RStudio. Additionally, I’ve completed a mini project using Python, expanding my skill set beyond R. Each project demonstrates the techniques I’ve applied and the workflows I’ve developed, showcasing my growth in data science.

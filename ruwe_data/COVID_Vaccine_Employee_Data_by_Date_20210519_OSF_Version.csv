@@ -1,0 +1,936 @@
+Unique_ID,regDateTimeFull2,email2CatDetail,Registrations,Cumulative_Registrations,Cumulative_Registrations2
+1,1/15/21 16:56,A: Social Proof,4,4,4
+2,1/15/21 16:57,A: Social Proof,1,5,5
+3,1/15/21 16:58,A: Social Proof,2,7,7
+4,1/15/21 16:59,A: Social Proof,1,8,8
+5,1/15/21 16:59,B: Reframing Risks,1,1,1
+6,1/15/21 17:00,A: Social Proof,1,9,9
+7,1/15/21 17:00,B: Reframing Risks,1,2,2
+8,1/15/21 17:01,A: Social Proof,1,10,10
+9,1/15/21 17:01,B: Reframing Risks,2,4,4
+10,1/15/21 17:02,A: Social Proof,2,12,12
+11,1/15/21 17:03,B: Reframing Risks,3,7,7
+12,1/15/21 17:04,A: Social Proof,1,13,13
+13,1/15/21 17:04,B: Reframing Risks,1,8,8
+14,1/15/21 17:05,B: Reframing Risks,1,9,9
+15,1/15/21 17:06,A: Social Proof,1,14,14
+16,1/15/21 17:06,B: Reframing Risks,1,10,10
+17,1/15/21 17:07,B: Reframing Risks,1,11,11
+18,1/15/21 17:07,No Contact,1,1,1
+19,1/15/21 17:08,A: Social Proof,1,15,15
+20,1/15/21 17:09,A: Social Proof,2,17,17
+21,1/15/21 17:11,No Contact,1,2,2
+22,1/15/21 17:12,B: Reframing Risks,1,12,12
+23,1/15/21 17:13,B: Reframing Risks,1,13,13
+24,1/15/21 17:14,B: Reframing Risks,1,14,14
+25,1/15/21 17:20,B: Reframing Risks,1,15,15
+26,1/15/21 17:21,B: Reframing Risks,1,16,16
+27,1/15/21 17:23,B: Reframing Risks,1,17,17
+28,1/15/21 17:26,B: Reframing Risks,1,18,18
+29,1/15/21 17:27,B: Reframing Risks,1,19,19
+30,1/15/21 17:28,A: Social Proof,1,18,18
+31,1/15/21 17:28,No Contact,1,3,3
+32,1/15/21 17:30,B: Reframing Risks,1,20,20
+33,1/15/21 17:45,B: Reframing Risks,1,21,21
+34,1/15/21 17:56,B: Reframing Risks,1,22,22
+35,1/15/21 17:57,A: Social Proof,1,19,19
+36,1/15/21 17:57,B: Reframing Risks,1,23,23
+37,1/15/21 17:58,A: Social Proof,1,20,20
+38,1/15/21 18:12,A: Social Proof,1,21,21
+39,1/15/21 18:22,A: Social Proof,1,22,22
+40,1/15/21 18:46,A: Social Proof,1,23,23
+41,1/15/21 18:53,No Contact,1,4,4
+42,1/15/21 19:03,B: Reframing Risks,2,25,25
+43,1/15/21 19:30,B: Reframing Risks,1,26,26
+44,1/15/21 19:39,No Contact,1,5,5
+45,1/15/21 19:47,B: Reframing Risks,1,27,27
+46,1/15/21 19:49,A: Social Proof,1,24,24
+47,1/15/21 20:09,A: Social Proof,1,25,25
+48,1/15/21 20:38,A: Social Proof,1,26,26
+49,1/15/21 20:42,A: Social Proof,1,27,27
+50,1/15/21 20:49,B: Reframing Risks,1,28,28
+51,1/15/21 21:02,No Contact,1,6,6
+52,1/15/21 21:03,A: Social Proof,1,28,28
+53,1/15/21 21:19,A: Social Proof,1,29,29
+54,1/15/21 21:31,A: Social Proof,1,30,30
+55,1/15/21 21:57,B: Reframing Risks,1,29,29
+56,1/15/21 22:04,No Contact,1,7,7
+57,1/15/21 22:22,A: Social Proof,1,31,31
+58,1/15/21 22:26,B: Reframing Risks,1,30,30
+59,1/15/21 22:41,B: Reframing Risks,1,31,31
+60,1/15/21 22:51,B: Reframing Risks,1,32,32
+61,1/15/21 22:58,A: Social Proof,1,32,32
+62,1/15/21 22:59,B: Reframing Risks,1,33,33
+63,1/15/21 23:06,A: Social Proof,1,33,33
+64,1/15/21 23:08,B: Reframing Risks,2,35,35
+65,1/15/21 23:10,A: Social Proof,1,34,34
+66,1/15/21 23:20,A: Social Proof,1,35,35
+67,1/16/21 0:13,B: Reframing Risks,1,36,36
+68,1/16/21 0:20,A: Social Proof,1,36,36
+69,1/16/21 0:52,A: Social Proof,1,37,37
+70,1/16/21 1:05,B: Reframing Risks,1,37,37
+71,1/16/21 1:09,A: Social Proof,1,38,38
+72,1/16/21 1:20,No Contact,1,8,8
+73,1/16/21 1:38,A: Social Proof,1,39,39
+74,1/16/21 2:01,A: Social Proof,1,40,40
+75,1/16/21 3:11,A: Social Proof,1,41,41
+76,1/16/21 3:21,No Contact,1,9,9
+77,1/16/21 3:27,B: Reframing Risks,1,38,38
+78,1/16/21 4:09,B: Reframing Risks,1,39,39
+79,1/16/21 5:11,A: Social Proof,1,42,42
+80,1/16/21 5:39,A: Social Proof,1,43,43
+81,1/16/21 6:11,B: Reframing Risks,1,40,40
+82,1/16/21 7:15,A: Social Proof,1,44,44
+83,1/16/21 7:27,B: Reframing Risks,1,41,41
+84,1/16/21 7:28,B: Reframing Risks,1,42,42
+85,1/16/21 7:34,B: Reframing Risks,1,43,43
+86,1/16/21 7:56,B: Reframing Risks,1,44,44
+87,1/16/21 8:09,A: Social Proof,1,45,45
+88,1/16/21 8:25,B: Reframing Risks,1,45,45
+89,1/16/21 8:25,No Contact,1,10,10
+90,1/16/21 8:36,No Contact,1,11,11
+91,1/16/21 8:38,B: Reframing Risks,1,46,46
+92,1/16/21 8:45,A: Social Proof,1,46,46
+93,1/16/21 8:50,B: Reframing Risks,1,47,47
+94,1/16/21 9:01,B: Reframing Risks,1,48,48
+95,1/16/21 9:17,A: Social Proof,1,47,47
+96,1/16/21 9:38,B: Reframing Risks,1,49,49
+97,1/16/21 9:45,A: Social Proof,1,48,48
+98,1/16/21 9:46,B: Reframing Risks,1,50,50
+99,1/16/21 10:03,A: Social Proof,1,49,49
+100,1/16/21 10:06,B: Reframing Risks,1,51,51
+101,1/16/21 10:20,A: Social Proof,1,50,50
+102,1/16/21 10:38,A: Social Proof,1,51,51
+103,1/16/21 10:39,B: Reframing Risks,1,52,52
+104,1/16/21 10:49,B: Reframing Risks,1,53,53
+105,1/16/21 11:15,A: Social Proof,1,52,52
+106,1/16/21 11:16,B: Reframing Risks,1,54,54
+107,1/16/21 11:35,B: Reframing Risks,1,55,55
+108,1/16/21 11:36,A: Social Proof,1,53,53
+109,1/16/21 11:38,A: Social Proof,1,54,54
+110,1/16/21 11:41,B: Reframing Risks,1,56,56
+111,1/16/21 11:41,No Contact,1,12,12
+112,1/16/21 11:48,A: Social Proof,1,55,55
+113,1/16/21 11:54,A: Social Proof,1,56,56
+114,1/16/21 11:55,No Contact,1,13,13
+115,1/16/21 12:04,A: Social Proof,1,57,57
+116,1/16/21 12:11,No Contact,1,14,14
+117,1/16/21 12:28,B: Reframing Risks,1,57,57
+118,1/16/21 12:41,A: Social Proof,1,58,58
+119,1/16/21 12:44,B: Reframing Risks,1,58,58
+120,1/16/21 12:49,B: Reframing Risks,1,59,59
+121,1/16/21 12:58,A: Social Proof,1,59,59
+122,1/16/21 13:04,No Contact,1,15,15
+123,1/16/21 13:25,A: Social Proof,1,60,60
+124,1/16/21 13:26,A: Social Proof,1,61,61
+125,1/16/21 13:30,B: Reframing Risks,1,60,60
+126,1/16/21 13:38,B: Reframing Risks,1,61,61
+127,1/16/21 13:39,No Contact,1,16,16
+128,1/16/21 13:44,B: Reframing Risks,1,62,62
+129,1/16/21 13:54,No Contact,1,17,17
+130,1/16/21 14:15,B: Reframing Risks,1,63,63
+131,1/16/21 14:30,A: Social Proof,1,62,62
+132,1/16/21 14:31,B: Reframing Risks,1,64,64
+133,1/16/21 15:04,A: Social Proof,1,63,63
+134,1/16/21 15:12,B: Reframing Risks,1,65,65
+135,1/16/21 15:18,B: Reframing Risks,1,66,66
+136,1/16/21 15:40,A: Social Proof,1,64,64
+137,1/16/21 15:46,B: Reframing Risks,1,67,67
+138,1/16/21 16:23,No Contact,1,18,18
+139,1/16/21 16:25,B: Reframing Risks,1,68,68
+140,1/16/21 16:32,A: Social Proof,1,65,65
+141,1/16/21 17:28,A: Social Proof,1,66,66
+142,1/16/21 17:36,No Contact,1,19,19
+143,1/16/21 17:47,A: Social Proof,1,67,67
+144,1/16/21 17:48,A: Social Proof,1,68,68
+145,1/16/21 17:58,A: Social Proof,1,69,69
+146,1/16/21 18:17,A: Social Proof,1,70,70
+147,1/16/21 18:37,B: Reframing Risks,1,69,69
+148,1/16/21 19:06,B: Reframing Risks,1,70,70
+149,1/16/21 19:54,B: Reframing Risks,1,71,71
+150,1/16/21 20:29,B: Reframing Risks,1,72,72
+151,1/16/21 20:31,B: Reframing Risks,1,73,73
+152,1/16/21 21:59,A: Social Proof,1,71,71
+153,1/16/21 22:32,B: Reframing Risks,1,74,74
+154,1/16/21 22:35,No Contact,1,20,20
+155,1/16/21 23:15,A: Social Proof,1,72,72
+156,1/16/21 23:22,No Contact,1,21,21
+157,1/16/21 23:54,No Contact,1,22,22
+158,1/17/21 0:26,B: Reframing Risks,1,75,75
+159,1/17/21 1:06,B: Reframing Risks,1,76,76
+160,1/17/21 1:44,B: Reframing Risks,1,77,77
+161,1/17/21 2:38,No Contact,1,23,23
+162,1/17/21 2:48,No Contact,1,24,24
+163,1/17/21 3:12,A: Social Proof,1,73,73
+164,1/17/21 3:22,No Contact,1,25,25
+165,1/17/21 4:19,A: Social Proof,1,74,74
+166,1/17/21 7:41,B: Reframing Risks,1,78,78
+167,1/17/21 8:19,B: Reframing Risks,1,79,79
+168,1/17/21 8:29,B: Reframing Risks,1,80,80
+169,1/17/21 8:39,A: Social Proof,1,75,75
+170,1/17/21 9:02,B: Reframing Risks,1,81,81
+171,1/17/21 9:38,A: Social Proof,1,76,76
+172,1/17/21 9:45,B: Reframing Risks,1,82,82
+173,1/17/21 9:48,A: Social Proof,1,77,77
+174,1/17/21 9:49,No Contact,1,26,26
+175,1/17/21 10:07,B: Reframing Risks,1,83,83
+176,1/17/21 10:11,A: Social Proof,1,78,78
+177,1/17/21 10:17,A: Social Proof,1,79,79
+178,1/17/21 10:32,B: Reframing Risks,1,84,84
+179,1/17/21 10:36,B: Reframing Risks,1,85,85
+180,1/17/21 10:45,A: Social Proof,1,80,80
+181,1/17/21 10:46,B: Reframing Risks,1,86,86
+182,1/17/21 10:59,A: Social Proof,1,81,81
+183,1/17/21 12:05,No Contact,1,27,27
+184,1/17/21 12:18,No Contact,1,28,28
+185,1/17/21 12:59,No Contact,1,29,29
+186,1/17/21 14:10,B: Reframing Risks,1,87,87
+187,1/17/21 14:14,A: Social Proof,1,82,82
+188,1/17/21 14:15,B: Reframing Risks,1,88,88
+189,1/17/21 14:19,No Contact,1,30,30
+190,1/17/21 14:29,A: Social Proof,1,83,83
+191,1/17/21 14:49,A: Social Proof,1,84,84
+192,1/17/21 14:50,No Contact,1,31,31
+193,1/17/21 14:58,B: Reframing Risks,1,89,89
+194,1/17/21 16:43,B: Reframing Risks,1,90,90
+195,1/17/21 17:00,B: Reframing Risks,1,91,91
+196,1/17/21 17:29,A: Social Proof,1,85,85
+197,1/17/21 17:38,B: Reframing Risks,1,92,92
+198,1/17/21 17:44,A: Social Proof,1,86,86
+199,1/17/21 18:29,A: Social Proof,1,87,87
+200,1/17/21 18:32,No Contact,1,32,32
+201,1/17/21 18:48,A: Social Proof,1,88,88
+202,1/17/21 18:52,B: Reframing Risks,1,93,93
+203,1/17/21 20:19,B: Reframing Risks,1,94,94
+204,1/17/21 20:22,No Contact,1,33,33
+205,1/17/21 20:25,B: Reframing Risks,1,95,95
+206,1/17/21 20:27,A: Social Proof,1,89,89
+207,1/17/21 20:41,B: Reframing Risks,1,96,96
+208,1/17/21 20:47,No Contact,1,34,34
+209,1/17/21 21:08,A: Social Proof,1,90,90
+210,1/17/21 21:17,B: Reframing Risks,1,97,97
+211,1/17/21 21:45,No Contact,1,35,35
+212,1/17/21 22:19,A: Social Proof,1,91,91
+213,1/17/21 22:39,No Contact,1,36,36
+214,1/17/21 22:57,A: Social Proof,1,92,92
+215,1/18/21 0:47,B: Reframing Risks,1,98,98
+216,1/18/21 0:52,B: Reframing Risks,1,99,99
+217,1/18/21 0:54,No Contact,1,37,37
+218,1/18/21 1:19,No Contact,1,38,38
+219,1/18/21 1:23,No Contact,1,39,39
+220,1/18/21 1:42,B: Reframing Risks,1,100,100
+221,1/18/21 2:32,A: Social Proof,1,93,93
+222,1/18/21 3:14,B: Reframing Risks,1,101,101
+223,1/18/21 3:19,B: Reframing Risks,1,102,102
+224,1/18/21 4:08,A: Social Proof,1,94,94
+225,1/18/21 4:25,B: Reframing Risks,1,103,103
+226,1/18/21 4:57,No Contact,1,40,40
+227,1/18/21 4:59,B: Reframing Risks,1,104,104
+228,1/18/21 5:12,B: Reframing Risks,1,105,105
+229,1/18/21 5:39,B: Reframing Risks,1,106,106
+230,1/18/21 6:03,B: Reframing Risks,1,107,107
+231,1/18/21 6:05,B: Reframing Risks,1,108,108
+232,1/18/21 6:16,A: Social Proof,1,95,95
+233,1/18/21 6:20,No Contact,1,41,41
+234,1/18/21 6:23,A: Social Proof,1,96,96
+235,1/18/21 6:27,A: Social Proof,1,97,97
+236,1/18/21 6:29,B: Reframing Risks,1,109,109
+237,1/18/21 6:31,No Contact,1,42,42
+238,1/18/21 6:36,B: Reframing Risks,2,111,111
+239,1/18/21 6:40,B: Reframing Risks,1,112,112
+240,1/18/21 6:43,B: Reframing Risks,1,113,113
+241,1/18/21 6:48,B: Reframing Risks,1,114,114
+242,1/18/21 6:52,B: Reframing Risks,1,115,115
+243,1/18/21 7:00,B: Reframing Risks,1,116,116
+244,1/18/21 7:05,B: Reframing Risks,1,117,117
+245,1/18/21 7:09,B: Reframing Risks,1,118,118
+246,1/18/21 7:11,B: Reframing Risks,1,119,119
+247,1/18/21 7:12,A: Social Proof,1,98,98
+248,1/18/21 7:13,A: Social Proof,2,100,100
+249,1/18/21 7:13,B: Reframing Risks,1,120,120
+250,1/18/21 7:18,A: Social Proof,1,101,101
+251,1/18/21 7:19,B: Reframing Risks,1,121,121
+252,1/18/21 7:21,A: Social Proof,1,102,102
+253,1/18/21 7:21,B: Reframing Risks,1,122,122
+254,1/18/21 7:25,B: Reframing Risks,1,123,123
+255,1/18/21 7:26,A: Social Proof,1,103,103
+256,1/18/21 7:28,B: Reframing Risks,1,124,124
+257,1/18/21 7:29,A: Social Proof,2,105,105
+258,1/18/21 7:29,B: Reframing Risks,1,125,125
+259,1/18/21 7:32,A: Social Proof,1,106,106
+260,1/18/21 7:34,B: Reframing Risks,1,126,126
+261,1/18/21 7:36,B: Reframing Risks,1,127,127
+262,1/18/21 7:38,A: Social Proof,1,107,107
+263,1/18/21 7:39,A: Social Proof,1,108,108
+264,1/18/21 7:40,B: Reframing Risks,1,128,128
+265,1/18/21 7:44,B: Reframing Risks,3,131,131
+266,1/18/21 7:47,A: Social Proof,1,109,109
+267,1/18/21 7:50,A: Social Proof,1,110,110
+268,1/18/21 7:54,A: Social Proof,1,111,111
+269,1/18/21 7:54,B: Reframing Risks,1,132,132
+270,1/18/21 7:57,A: Social Proof,1,112,112
+271,1/18/21 7:58,A: Social Proof,1,113,113
+272,1/18/21 7:59,A: Social Proof,1,114,114
+273,1/18/21 8:00,B: Reframing Risks,1,133,133
+274,1/18/21 8:01,No Contact,1,43,43
+275,1/18/21 8:02,A: Social Proof,1,115,115
+276,1/18/21 8:02,B: Reframing Risks,1,134,134
+277,1/18/21 8:03,B: Reframing Risks,3,137,137
+278,1/18/21 8:03,No Contact,1,44,44
+279,1/18/21 8:04,A: Social Proof,1,116,116
+280,1/18/21 8:05,A: Social Proof,1,117,117
+281,1/18/21 8:05,B: Reframing Risks,1,138,138
+282,1/18/21 8:06,A: Social Proof,1,118,118
+283,1/18/21 8:06,B: Reframing Risks,1,139,139
+284,1/18/21 8:07,A: Social Proof,1,119,119
+285,1/18/21 8:09,B: Reframing Risks,2,141,141
+286,1/18/21 8:12,A: Social Proof,2,121,121
+287,1/18/21 8:12,B: Reframing Risks,2,143,143
+288,1/18/21 8:12,No Contact,1,45,45
+289,1/18/21 8:15,B: Reframing Risks,1,144,144
+290,1/18/21 8:17,B: Reframing Risks,1,145,145
+291,1/18/21 8:18,No Contact,1,46,46
+292,1/18/21 8:25,A: Social Proof,1,122,122
+293,1/18/21 8:25,B: Reframing Risks,1,146,146
+294,1/18/21 8:28,A: Social Proof,1,123,123
+295,1/18/21 8:28,No Contact,1,47,47
+296,1/18/21 8:29,B: Reframing Risks,1,147,147
+297,1/18/21 8:30,A: Social Proof,1,124,124
+298,1/18/21 8:31,A: Social Proof,1,125,125
+299,1/18/21 8:31,B: Reframing Risks,1,148,148
+300,1/18/21 8:32,A: Social Proof,1,126,126
+301,1/18/21 8:32,No Contact,1,48,48
+302,1/18/21 8:37,B: Reframing Risks,1,149,149
+303,1/18/21 8:40,B: Reframing Risks,1,150,150
+304,1/18/21 8:41,A: Social Proof,1,127,127
+305,1/18/21 8:41,B: Reframing Risks,2,152,152
+306,1/18/21 8:42,B: Reframing Risks,1,153,153
+307,1/18/21 8:46,A: Social Proof,3,130,130
+308,1/18/21 8:52,A: Social Proof,1,131,131
+309,1/18/21 8:52,B: Reframing Risks,1,154,154
+310,1/18/21 8:53,A: Social Proof,1,132,132
+311,1/18/21 8:56,B: Reframing Risks,1,155,155
+312,1/18/21 8:59,A: Social Proof,1,133,133
+313,1/18/21 9:00,B: Reframing Risks,1,156,156
+314,1/18/21 9:00,No Contact,1,49,49
+315,1/18/21 9:01,A: Social Proof,1,134,134
+316,1/18/21 9:02,No Contact,1,50,50
+317,1/18/21 9:16,B: Reframing Risks,1,157,157
+318,1/18/21 9:19,A: Social Proof,1,135,135
+319,1/18/21 9:19,No Contact,1,51,51
+320,1/18/21 9:20,A: Social Proof,2,137,137
+321,1/18/21 9:21,B: Reframing Risks,1,158,158
+322,1/18/21 9:21,No Contact,2,53,53
+323,1/18/21 9:23,A: Social Proof,1,138,138
+324,1/18/21 9:23,B: Reframing Risks,1,159,159
+325,1/18/21 9:24,A: Social Proof,1,139,139
+326,1/18/21 9:25,No Contact,1,54,54
+327,1/18/21 9:27,No Contact,1,55,55
+328,1/18/21 9:28,A: Social Proof,1,140,140
+329,1/18/21 9:28,B: Reframing Risks,1,160,160
+330,1/18/21 9:32,A: Social Proof,1,141,141
+331,1/18/21 9:34,A: Social Proof,1,142,142
+332,1/18/21 9:35,A: Social Proof,1,143,143
+333,1/18/21 9:39,B: Reframing Risks,1,161,161
+334,1/18/21 9:40,A: Social Proof,1,144,144
+335,1/18/21 9:40,B: Reframing Risks,1,162,162
+336,1/18/21 9:42,A: Social Proof,1,145,145
+337,1/18/21 9:42,B: Reframing Risks,1,163,163
+338,1/18/21 9:46,No Contact,1,56,56
+339,1/18/21 9:49,A: Social Proof,1,146,146
+340,1/18/21 9:49,B: Reframing Risks,1,164,164
+341,1/18/21 9:50,A: Social Proof,1,147,147
+342,1/18/21 9:51,A: Social Proof,1,148,148
+343,1/18/21 9:53,A: Social Proof,1,149,149
+344,1/18/21 9:54,A: Social Proof,1,150,150
+345,1/18/21 9:56,B: Reframing Risks,1,165,165
+346,1/18/21 9:58,B: Reframing Risks,1,166,166
+347,1/18/21 10:00,B: Reframing Risks,1,167,167
+348,1/18/21 10:01,A: Social Proof,1,151,151
+349,1/18/21 10:02,A: Social Proof,1,152,152
+350,1/18/21 10:02,B: Reframing Risks,1,168,168
+351,1/18/21 10:02,No Contact,1,57,57
+352,1/18/21 10:05,B: Reframing Risks,1,169,169
+353,1/18/21 10:08,A: Social Proof,1,153,153
+354,1/18/21 10:10,A: Social Proof,1,154,154
+355,1/18/21 10:11,B: Reframing Risks,1,170,170
+356,1/18/21 10:13,B: Reframing Risks,1,171,171
+357,1/18/21 10:14,No Contact,1,58,58
+358,1/18/21 10:16,No Contact,1,59,59
+359,1/18/21 10:17,No Contact,1,60,60
+360,1/18/21 10:18,A: Social Proof,3,157,157
+361,1/18/21 10:23,No Contact,1,61,61
+362,1/18/21 10:26,B: Reframing Risks,2,173,173
+363,1/18/21 10:30,B: Reframing Risks,1,174,174
+364,1/18/21 10:30,No Contact,1,62,62
+365,1/18/21 10:32,A: Social Proof,2,159,159
+366,1/18/21 10:32,No Contact,1,63,63
+367,1/18/21 10:38,No Contact,1,64,64
+368,1/18/21 10:40,A: Social Proof,1,160,160
+369,1/18/21 10:40,B: Reframing Risks,1,175,175
+370,1/18/21 10:41,A: Social Proof,1,161,161
+371,1/18/21 10:44,B: Reframing Risks,1,176,176
+372,1/18/21 10:46,A: Social Proof,1,162,162
+373,1/18/21 10:47,A: Social Proof,1,163,163
+374,1/18/21 10:47,No Contact,1,65,65
+375,1/18/21 10:49,B: Reframing Risks,1,177,177
+376,1/18/21 10:52,B: Reframing Risks,1,178,178
+377,1/18/21 10:55,B: Reframing Risks,1,179,179
+378,1/18/21 10:59,B: Reframing Risks,2,181,181
+379,1/18/21 10:59,No Contact,1,66,66
+380,1/18/21 11:01,A: Social Proof,1,164,164
+381,1/18/21 11:02,B: Reframing Risks,1,182,182
+382,1/18/21 11:03,A: Social Proof,1,165,165
+383,1/18/21 11:04,A: Social Proof,1,166,166
+384,1/18/21 11:05,No Contact,1,67,67
+385,1/18/21 11:12,A: Social Proof,1,167,167
+386,1/18/21 11:12,B: Reframing Risks,1,183,183
+387,1/18/21 11:13,A: Social Proof,1,168,168
+388,1/18/21 11:15,A: Social Proof,1,169,169
+389,1/18/21 11:15,No Contact,1,68,68
+390,1/18/21 11:18,B: Reframing Risks,1,184,184
+391,1/18/21 11:19,No Contact,1,69,69
+392,1/18/21 11:26,B: Reframing Risks,1,185,185
+393,1/18/21 11:27,A: Social Proof,1,170,170
+394,1/18/21 11:27,B: Reframing Risks,1,186,186
+395,1/18/21 11:42,A: Social Proof,1,171,171
+396,1/18/21 11:50,No Contact,1,70,70
+397,1/18/21 11:56,B: Reframing Risks,1,187,187
+398,1/18/21 11:57,B: Reframing Risks,1,188,188
+399,1/18/21 12:01,B: Reframing Risks,1,189,189
+400,1/18/21 12:03,No Contact,1,71,71
+401,1/18/21 12:09,A: Social Proof,1,172,172
+402,1/18/21 12:11,A: Social Proof,1,173,173
+403,1/18/21 12:12,B: Reframing Risks,1,190,190
+404,1/18/21 12:14,No Contact,1,72,72
+405,1/18/21 12:16,No Contact,1,73,73
+406,1/18/21 12:18,B: Reframing Risks,1,191,191
+407,1/18/21 12:26,A: Social Proof,1,174,174
+408,1/18/21 12:32,A: Social Proof,1,175,175
+409,1/18/21 12:36,B: Reframing Risks,2,193,193
+410,1/18/21 12:38,A: Social Proof,1,176,176
+411,1/18/21 12:40,B: Reframing Risks,1,194,194
+412,1/18/21 12:41,A: Social Proof,1,177,177
+413,1/18/21 12:46,A: Social Proof,1,178,178
+414,1/18/21 12:49,No Contact,1,74,74
+415,1/18/21 13:01,B: Reframing Risks,1,195,195
+416,1/18/21 13:03,A: Social Proof,1,179,179
+417,1/18/21 13:03,B: Reframing Risks,1,196,196
+418,1/18/21 13:05,B: Reframing Risks,1,197,197
+419,1/18/21 13:06,B: Reframing Risks,1,198,198
+420,1/18/21 13:11,A: Social Proof,1,180,180
+421,1/18/21 13:11,B: Reframing Risks,1,199,199
+422,1/18/21 13:12,No Contact,1,75,75
+423,1/18/21 13:19,B: Reframing Risks,1,200,200
+424,1/18/21 13:25,A: Social Proof,2,182,182
+425,1/18/21 13:29,No Contact,1,76,76
+426,1/18/21 13:33,A: Social Proof,1,183,183
+427,1/18/21 13:35,B: Reframing Risks,1,201,201
+428,1/18/21 13:42,A: Social Proof,1,184,184
+429,1/18/21 13:45,A: Social Proof,1,185,185
+430,1/18/21 13:47,No Contact,1,77,77
+431,1/18/21 13:50,B: Reframing Risks,1,202,202
+432,1/18/21 13:51,A: Social Proof,1,186,186
+433,1/18/21 13:54,B: Reframing Risks,1,203,203
+434,1/18/21 13:56,B: Reframing Risks,1,204,204
+435,1/18/21 14:01,A: Social Proof,1,187,187
+436,1/18/21 14:06,A: Social Proof,1,188,188
+437,1/18/21 14:06,No Contact,1,78,78
+438,1/18/21 14:10,A: Social Proof,1,189,189
+439,1/18/21 14:11,B: Reframing Risks,1,205,205
+440,1/18/21 14:16,No Contact,1,79,79
+441,1/18/21 14:17,No Contact,1,80,80
+442,1/18/21 14:19,B: Reframing Risks,1,206,206
+443,1/18/21 14:23,A: Social Proof,1,190,190
+444,1/18/21 14:23,B: Reframing Risks,1,207,207
+445,1/18/21 14:30,No Contact,1,81,81
+446,1/18/21 14:31,No Contact,1,82,82
+447,1/18/21 14:32,A: Social Proof,1,191,191
+448,1/18/21 14:32,B: Reframing Risks,1,208,208
+449,1/18/21 14:32,No Contact,1,83,83
+450,1/18/21 14:34,A: Social Proof,2,193,193
+451,1/18/21 14:35,B: Reframing Risks,1,209,209
+452,1/18/21 14:38,B: Reframing Risks,1,210,210
+453,1/18/21 14:40,No Contact,1,84,84
+454,1/18/21 14:42,B: Reframing Risks,1,211,211
+455,1/18/21 14:42,No Contact,1,85,85
+456,1/18/21 14:43,B: Reframing Risks,1,212,212
+457,1/18/21 14:50,B: Reframing Risks,1,213,213
+458,1/18/21 14:57,A: Social Proof,1,194,194
+459,1/18/21 14:58,A: Social Proof,1,195,195
+460,1/18/21 15:05,A: Social Proof,1,196,196
+461,1/18/21 15:06,A: Social Proof,1,197,197
+462,1/18/21 15:08,A: Social Proof,1,198,198
+463,1/18/21 15:10,B: Reframing Risks,1,214,214
+464,1/18/21 15:11,B: Reframing Risks,1,215,215
+465,1/18/21 15:11,No Contact,1,86,86
+466,1/18/21 15:12,No Contact,1,87,87
+467,1/18/21 15:13,A: Social Proof,1,199,199
+468,1/18/21 15:13,No Contact,1,88,88
+469,1/18/21 15:16,A: Social Proof,1,200,200
+470,1/18/21 15:21,A: Social Proof,1,201,201
+471,1/18/21 15:21,B: Reframing Risks,1,216,216
+472,1/18/21 15:33,B: Reframing Risks,1,217,217
+473,1/18/21 15:35,No Contact,1,89,89
+474,1/18/21 15:36,A: Social Proof,1,202,202
+475,1/18/21 15:39,A: Social Proof,1,203,203
+476,1/18/21 15:39,No Contact,2,91,91
+477,1/18/21 15:43,No Contact,1,92,92
+478,1/18/21 15:47,B: Reframing Risks,1,218,218
+479,1/18/21 15:48,No Contact,1,93,93
+480,1/18/21 15:50,A: Social Proof,1,204,204
+481,1/18/21 15:50,No Contact,1,94,94
+482,1/18/21 15:51,No Contact,1,95,95
+483,1/18/21 16:01,B: Reframing Risks,1,219,219
+484,1/18/21 16:08,A: Social Proof,1,205,205
+485,1/18/21 16:12,No Contact,1,96,96
+486,1/18/21 16:13,A: Social Proof,2,207,207
+487,1/18/21 16:13,No Contact,1,97,97
+488,1/18/21 16:17,No Contact,1,98,98
+489,1/18/21 16:20,No Contact,1,99,99
+490,1/18/21 16:27,No Contact,1,100,100
+491,1/18/21 16:29,No Contact,1,101,101
+492,1/18/21 16:38,B: Reframing Risks,1,220,220
+493,1/18/21 16:41,A: Social Proof,1,208,208
+494,1/18/21 16:41,A2: Social Proof,1,1,102
+495,1/18/21 16:42,A2: Social Proof,2,3,104
+496,1/18/21 16:44,A: Social Proof,1,209,209
+497,1/18/21 16:44,A2: Social Proof,1,4,105
+498,1/18/21 16:44,B2: Reframing Risks,2,2,103
+499,1/18/21 16:45,A2: Social Proof,1,5,106
+500,1/18/21 16:45,B2: Reframing Risks,1,3,104
+501,1/18/21 16:46,B2: Reframing Risks,1,4,105
+502,1/18/21 16:49,A: Social Proof,1,210,210
+503,1/18/21 16:50,B2: Reframing Risks,1,5,106
+504,1/18/21 16:51,A2: Social Proof,1,6,107
+505,1/18/21 16:52,A2: Social Proof,1,7,108
+506,1/18/21 16:56,A2: Social Proof,1,8,109
+507,1/18/21 16:58,A2: Social Proof,1,9,110
+508,1/18/21 17:01,A2: Social Proof,1,10,111
+509,1/18/21 17:01,B2: Reframing Risks,2,7,108
+510,1/18/21 17:03,B2: Reframing Risks,1,8,109
+511,1/18/21 17:05,A2: Social Proof,2,12,113
+512,1/18/21 17:06,B: Reframing Risks,1,221,221
+513,1/18/21 17:06,B2: Reframing Risks,1,9,110
+514,1/18/21 17:13,B2: Reframing Risks,1,10,111
+515,1/18/21 17:17,A2: Social Proof,1,13,114
+516,1/18/21 17:19,B2: Reframing Risks,1,11,112
+517,1/18/21 17:21,A2: Social Proof,1,14,115
+518,1/18/21 17:28,A2: Social Proof,1,15,116
+519,1/18/21 17:33,A2: Social Proof,1,16,117
+520,1/18/21 17:39,A2: Social Proof,1,17,118
+521,1/18/21 17:42,B: Reframing Risks,1,222,222
+522,1/18/21 17:59,A2: Social Proof,1,18,119
+523,1/18/21 18:00,A2: Social Proof,1,19,120
+524,1/18/21 18:01,A2: Social Proof,1,20,121
+525,1/18/21 18:26,B2: Reframing Risks,1,12,113
+526,1/18/21 18:33,B2: Reframing Risks,1,13,114
+527,1/18/21 18:35,A2: Social Proof,1,21,122
+528,1/18/21 18:40,B: Reframing Risks,1,223,223
+529,1/18/21 18:42,A2: Social Proof,2,23,124
+530,1/18/21 18:48,B: Reframing Risks,1,224,224
+531,1/18/21 18:51,A2: Social Proof,1,24,125
+532,1/18/21 18:56,A2: Social Proof,1,25,126
+533,1/18/21 18:58,A: Social Proof,1,211,211
+534,1/18/21 18:59,A2: Social Proof,1,26,127
+535,1/18/21 19:00,A2: Social Proof,1,27,128
+536,1/18/21 19:07,B2: Reframing Risks,1,14,115
+537,1/18/21 19:13,A: Social Proof,1,212,212
+538,1/18/21 19:13,A2: Social Proof,1,28,129
+539,1/18/21 19:28,B: Reframing Risks,1,225,225
+540,1/18/21 19:37,A2: Social Proof,1,29,130
+541,1/18/21 19:44,A: Social Proof,1,213,213
+542,1/18/21 19:46,B: Reframing Risks,1,226,226
+543,1/18/21 19:47,A2: Social Proof,1,30,131
+544,1/18/21 19:51,A: Social Proof,1,214,214
+545,1/18/21 19:52,A2: Social Proof,1,31,132
+546,1/18/21 19:55,A: Social Proof,1,215,215
+547,1/18/21 19:56,A2: Social Proof,1,32,133
+548,1/18/21 20:11,A: Social Proof,1,216,216
+549,1/18/21 20:12,A2: Social Proof,1,33,134
+550,1/18/21 20:14,A: Social Proof,1,217,217
+551,1/18/21 20:14,B2: Reframing Risks,1,15,116
+552,1/18/21 20:17,A2: Social Proof,1,34,135
+553,1/18/21 20:20,A2: Social Proof,1,35,136
+554,1/18/21 20:43,B: Reframing Risks,1,227,227
+555,1/18/21 20:52,A: Social Proof,1,218,218
+556,1/18/21 20:58,A: Social Proof,1,219,219
+557,1/18/21 21:05,B2: Reframing Risks,1,16,117
+558,1/18/21 21:07,B2: Reframing Risks,1,17,118
+559,1/18/21 21:38,A2: Social Proof,1,36,137
+560,1/18/21 21:48,A: Social Proof,1,220,220
+561,1/18/21 21:58,A: Social Proof,1,221,221
+562,1/18/21 22:46,B: Reframing Risks,1,228,228
+563,1/18/21 23:09,B: Reframing Risks,1,229,229
+564,1/18/21 23:17,A: Social Proof,1,222,222
+565,1/18/21 23:30,B2: Reframing Risks,1,18,119
+566,1/18/21 23:42,B: Reframing Risks,1,230,230
+567,1/18/21 23:43,A2: Social Proof,1,37,138
+568,1/18/21 23:59,A2: Social Proof,1,38,139
+569,1/19/21 0:02,B: Reframing Risks,1,231,231
+570,1/19/21 0:08,B2: Reframing Risks,1,19,120
+571,1/19/21 1:00,A: Social Proof,1,223,223
+572,1/19/21 1:19,A: Social Proof,1,224,224
+573,1/19/21 1:19,A2: Social Proof,1,39,140
+574,1/19/21 1:55,B: Reframing Risks,1,232,232
+575,1/19/21 1:57,A: Social Proof,1,225,225
+576,1/19/21 2:08,A: Social Proof,1,226,226
+577,1/19/21 2:47,A2: Social Proof,1,40,141
+578,1/19/21 3:03,A2: Social Proof,1,41,142
+579,1/19/21 3:14,A: Social Proof,1,227,227
+580,1/19/21 3:17,B: Reframing Risks,1,233,233
+581,1/19/21 3:24,A: Social Proof,1,228,228
+582,1/19/21 4:04,B2: Reframing Risks,1,20,121
+583,1/19/21 4:05,A2: Social Proof,1,42,143
+584,1/19/21 4:42,B2: Reframing Risks,1,21,122
+585,1/19/21 4:43,A: Social Proof,1,229,229
+586,1/19/21 4:43,B: Reframing Risks,1,234,234
+587,1/19/21 4:43,B2: Reframing Risks,1,22,123
+588,1/19/21 5:00,B2: Reframing Risks,1,23,124
+589,1/19/21 5:01,A2: Social Proof,1,43,144
+590,1/19/21 5:11,B2: Reframing Risks,1,24,125
+591,1/19/21 5:12,B2: Reframing Risks,1,25,126
+592,1/19/21 5:14,B2: Reframing Risks,1,26,127
+593,1/19/21 5:36,A2: Social Proof,1,44,145
+594,1/19/21 5:43,A2: Social Proof,1,45,146
+595,1/19/21 5:50,B2: Reframing Risks,1,27,128
+596,1/19/21 5:53,B2: Reframing Risks,1,28,129
+597,1/19/21 6:00,B2: Reframing Risks,1,29,130
+598,1/19/21 6:02,B: Reframing Risks,1,235,235
+599,1/19/21 6:03,A2: Social Proof,1,46,147
+600,1/19/21 6:03,B2: Reframing Risks,1,30,131
+601,1/19/21 6:04,A2: Social Proof,1,47,148
+602,1/19/21 6:06,A2: Social Proof,1,48,149
+603,1/19/21 6:08,A2: Social Proof,1,49,150
+604,1/19/21 6:18,B2: Reframing Risks,1,31,132
+605,1/19/21 6:21,A2: Social Proof,1,50,151
+606,1/19/21 6:26,A2: Social Proof,1,51,152
+607,1/19/21 6:27,B: Reframing Risks,1,236,236
+608,1/19/21 6:28,B: Reframing Risks,1,237,237
+609,1/19/21 6:32,B2: Reframing Risks,1,32,133
+610,1/19/21 6:33,B2: Reframing Risks,1,33,134
+611,1/19/21 6:35,B: Reframing Risks,1,238,238
+612,1/19/21 6:39,B2: Reframing Risks,1,34,135
+613,1/19/21 6:43,B: Reframing Risks,1,239,239
+614,1/19/21 6:44,B2: Reframing Risks,1,35,136
+615,1/19/21 6:51,B2: Reframing Risks,1,36,137
+616,1/19/21 6:53,A2: Social Proof,1,52,153
+617,1/19/21 6:55,B: Reframing Risks,1,240,240
+618,1/19/21 6:56,A2: Social Proof,1,53,154
+619,1/19/21 6:56,B2: Reframing Risks,1,37,138
+620,1/19/21 6:57,A: Social Proof,1,230,230
+621,1/19/21 6:58,A2: Social Proof,2,55,156
+622,1/19/21 6:59,B: Reframing Risks,2,242,242
+623,1/19/21 7:01,A2: Social Proof,2,57,158
+624,1/19/21 7:06,A: Social Proof,1,231,231
+625,1/19/21 7:06,B: Reframing Risks,1,243,243
+626,1/19/21 7:08,A: Social Proof,1,232,232
+627,1/19/21 7:11,A2: Social Proof,1,58,159
+628,1/19/21 7:12,A: Social Proof,1,233,233
+629,1/19/21 7:13,A: Social Proof,1,234,234
+630,1/19/21 7:13,B: Reframing Risks,1,244,244
+631,1/19/21 7:16,B2: Reframing Risks,1,38,139
+632,1/19/21 7:17,B: Reframing Risks,1,245,245
+633,1/19/21 7:20,B: Reframing Risks,1,246,246
+634,1/19/21 7:20,B2: Reframing Risks,1,39,140
+635,1/19/21 7:22,B: Reframing Risks,1,247,247
+636,1/19/21 7:23,B: Reframing Risks,1,248,248
+637,1/19/21 7:24,A2: Social Proof,1,59,160
+638,1/19/21 7:26,A2: Social Proof,1,60,161
+639,1/19/21 7:28,B: Reframing Risks,1,249,249
+640,1/19/21 7:28,B2: Reframing Risks,1,40,141
+641,1/19/21 7:29,A: Social Proof,1,235,235
+642,1/19/21 7:30,A2: Social Proof,1,61,162
+643,1/19/21 7:30,B2: Reframing Risks,1,41,142
+644,1/19/21 7:31,B2: Reframing Risks,1,42,143
+645,1/19/21 7:34,B2: Reframing Risks,1,43,144
+646,1/19/21 7:35,A2: Social Proof,1,62,163
+647,1/19/21 7:38,A: Social Proof,1,236,236
+648,1/19/21 7:41,A: Social Proof,1,237,237
+649,1/19/21 7:42,A2: Social Proof,1,63,164
+650,1/19/21 7:43,A2: Social Proof,1,64,165
+651,1/19/21 7:44,A: Social Proof,1,238,238
+652,1/19/21 7:44,B: Reframing Risks,1,250,250
+653,1/19/21 7:46,A: Social Proof,1,239,239
+654,1/19/21 7:46,A2: Social Proof,1,65,166
+655,1/19/21 7:46,B: Reframing Risks,1,251,251
+656,1/19/21 7:46,B2: Reframing Risks,1,44,145
+657,1/19/21 7:48,A2: Social Proof,1,66,167
+658,1/19/21 7:48,B2: Reframing Risks,1,45,146
+659,1/19/21 7:50,A: Social Proof,1,240,240
+660,1/19/21 7:50,A2: Social Proof,1,67,168
+661,1/19/21 7:50,B: Reframing Risks,1,252,252
+662,1/19/21 7:51,A: Social Proof,2,242,242
+663,1/19/21 7:51,A2: Social Proof,1,68,169
+664,1/19/21 7:53,A: Social Proof,1,243,243
+665,1/19/21 7:54,B: Reframing Risks,2,254,254
+666,1/19/21 7:56,A2: Social Proof,1,69,170
+667,1/19/21 7:57,A: Social Proof,1,244,244
+668,1/19/21 7:57,B2: Reframing Risks,1,46,147
+669,1/19/21 7:58,B: Reframing Risks,1,255,255
+670,1/19/21 7:58,B2: Reframing Risks,1,47,148
+671,1/19/21 7:59,A: Social Proof,1,245,245
+672,1/19/21 7:59,B: Reframing Risks,1,256,256
+673,1/19/21 8:00,B2: Reframing Risks,1,48,149
+674,1/19/21 8:01,A2: Social Proof,2,71,172
+675,1/19/21 8:03,A: Social Proof,1,246,246
+676,1/19/21 8:04,B: Reframing Risks,1,257,257
+677,1/19/21 8:05,B2: Reframing Risks,1,49,150
+678,1/19/21 8:06,B: Reframing Risks,1,258,258
+679,1/19/21 8:07,A2: Social Proof,1,72,173
+680,1/19/21 8:08,B2: Reframing Risks,1,50,151
+681,1/19/21 8:09,A: Social Proof,1,247,247
+682,1/19/21 8:09,B2: Reframing Risks,1,51,152
+683,1/19/21 8:11,A2: Social Proof,1,73,174
+684,1/19/21 8:11,B: Reframing Risks,1,259,259
+685,1/19/21 8:12,A2: Social Proof,1,74,175
+686,1/19/21 8:14,B: Reframing Risks,1,260,260
+687,1/19/21 8:15,A2: Social Proof,1,75,176
+688,1/19/21 8:17,A2: Social Proof,1,76,177
+689,1/19/21 8:18,A: Social Proof,1,248,248
+690,1/19/21 8:18,B: Reframing Risks,1,261,261
+691,1/19/21 8:18,B2: Reframing Risks,1,52,153
+692,1/19/21 8:19,A: Social Proof,1,249,249
+693,1/19/21 8:19,B2: Reframing Risks,1,53,154
+694,1/19/21 8:20,B2: Reframing Risks,1,54,155
+695,1/19/21 8:21,A: Social Proof,2,251,251
+696,1/19/21 8:21,A2: Social Proof,1,77,178
+697,1/19/21 8:22,A2: Social Proof,1,78,179
+698,1/19/21 8:23,A: Social Proof,1,252,252
+699,1/19/21 8:23,B: Reframing Risks,1,262,262
+700,1/19/21 8:25,B: Reframing Risks,1,263,263
+701,1/19/21 8:27,A2: Social Proof,1,79,180
+702,1/19/21 8:27,B: Reframing Risks,1,264,264
+703,1/19/21 8:28,A: Social Proof,1,253,253
+704,1/19/21 8:34,B: Reframing Risks,1,265,265
+705,1/19/21 8:35,A2: Social Proof,1,80,181
+706,1/19/21 8:35,B: Reframing Risks,2,267,267
+707,1/19/21 8:38,A2: Social Proof,1,81,182
+708,1/19/21 8:41,A: Social Proof,1,254,254
+709,1/19/21 8:41,B: Reframing Risks,1,268,268
+710,1/19/21 8:43,A: Social Proof,1,255,255
+711,1/19/21 8:43,A2: Social Proof,1,82,183
+712,1/19/21 8:43,B: Reframing Risks,1,269,269
+713,1/19/21 8:45,A: Social Proof,1,256,256
+714,1/19/21 8:47,A2: Social Proof,1,83,184
+715,1/19/21 8:48,A: Social Proof,1,257,257
+716,1/19/21 8:48,B2: Reframing Risks,1,55,156
+717,1/19/21 8:50,A: Social Proof,1,258,258
+718,1/19/21 8:50,B: Reframing Risks,1,270,270
+719,1/19/21 8:50,B2: Reframing Risks,1,56,157
+720,1/19/21 8:51,A: Social Proof,1,259,259
+721,1/19/21 8:51,B: Reframing Risks,1,271,271
+722,1/19/21 8:52,A: Social Proof,1,260,260
+723,1/19/21 8:52,B: Reframing Risks,1,272,272
+724,1/19/21 8:53,B2: Reframing Risks,1,57,158
+725,1/19/21 8:54,A: Social Proof,1,261,261
+726,1/19/21 8:54,B: Reframing Risks,1,273,273
+727,1/19/21 8:54,B2: Reframing Risks,1,58,159
+728,1/19/21 8:55,B: Reframing Risks,1,274,274
+729,1/19/21 8:58,A: Social Proof,2,263,263
+730,1/19/21 8:58,A2: Social Proof,1,84,185
+731,1/19/21 8:58,B2: Reframing Risks,1,59,160
+732,1/19/21 8:59,B: Reframing Risks,1,275,275
+733,1/19/21 9:00,B2: Reframing Risks,1,60,161
+734,1/19/21 9:01,B2: Reframing Risks,1,61,162
+735,1/19/21 9:03,B2: Reframing Risks,1,62,163
+736,1/19/21 9:05,A: Social Proof,1,264,264
+737,1/19/21 9:05,B: Reframing Risks,1,276,276
+738,1/19/21 9:07,B: Reframing Risks,1,277,277
+739,1/19/21 9:08,B2: Reframing Risks,1,63,164
+740,1/19/21 9:09,A2: Social Proof,1,85,186
+741,1/19/21 9:10,B: Reframing Risks,1,278,278
+742,1/19/21 9:10,B2: Reframing Risks,1,64,165
+743,1/19/21 9:11,B2: Reframing Risks,2,66,167
+744,1/19/21 9:13,B2: Reframing Risks,1,67,168
+745,1/19/21 9:14,B: Reframing Risks,1,279,279
+746,1/19/21 9:16,A: Social Proof,1,265,265
+747,1/19/21 9:16,A2: Social Proof,1,86,187
+748,1/19/21 9:18,A: Social Proof,1,266,266
+749,1/19/21 9:18,B: Reframing Risks,1,280,280
+750,1/19/21 9:19,A2: Social Proof,1,87,188
+751,1/19/21 9:19,B: Reframing Risks,1,281,281
+752,1/19/21 9:24,B: Reframing Risks,1,282,282
+753,1/19/21 9:26,A: Social Proof,1,267,267
+754,1/19/21 9:28,A2: Social Proof,1,88,189
+755,1/19/21 9:35,A: Social Proof,1,268,268
+756,1/19/21 9:37,B: Reframing Risks,1,283,283
+757,1/19/21 9:38,A2: Social Proof,1,89,190
+758,1/19/21 9:39,B: Reframing Risks,1,284,284
+759,1/19/21 9:40,A: Social Proof,1,269,269
+760,1/19/21 9:40,A2: Social Proof,1,90,191
+761,1/19/21 9:45,A: Social Proof,1,270,270
+762,1/19/21 9:46,B: Reframing Risks,1,285,285
+763,1/19/21 9:47,A: Social Proof,1,271,271
+764,1/19/21 9:47,A2: Social Proof,1,91,192
+765,1/19/21 9:50,A2: Social Proof,1,92,193
+766,1/19/21 9:50,B2: Reframing Risks,1,68,169
+767,1/19/21 9:52,A: Social Proof,1,272,272
+768,1/19/21 9:52,A2: Social Proof,1,93,194
+769,1/19/21 9:54,B2: Reframing Risks,1,69,170
+770,1/19/21 9:56,A: Social Proof,1,273,273
+771,1/19/21 9:58,B: Reframing Risks,1,286,286
+772,1/19/21 10:00,A2: Social Proof,1,94,195
+773,1/19/21 10:01,A: Social Proof,1,274,274
+774,1/19/21 10:02,A: Social Proof,1,275,275
+775,1/19/21 10:06,A2: Social Proof,1,95,196
+776,1/19/21 10:06,B2: Reframing Risks,1,70,171
+777,1/19/21 10:09,A: Social Proof,1,276,276
+778,1/19/21 10:11,A: Social Proof,1,277,277
+779,1/19/21 10:11,A2: Social Proof,1,96,197
+780,1/19/21 10:12,B2: Reframing Risks,2,72,173
+781,1/19/21 10:17,B2: Reframing Risks,1,73,174
+782,1/19/21 10:18,A2: Social Proof,1,97,198
+783,1/19/21 10:21,A2: Social Proof,1,98,199
+784,1/19/21 10:21,B2: Reframing Risks,1,74,175
+785,1/19/21 10:22,B: Reframing Risks,2,288,288
+786,1/19/21 10:23,A: Social Proof,1,278,278
+787,1/19/21 10:26,B: Reframing Risks,1,289,289
+788,1/19/21 10:27,A: Social Proof,1,279,279
+789,1/19/21 10:28,A2: Social Proof,1,99,200
+790,1/19/21 10:30,B: Reframing Risks,1,290,290
+791,1/19/21 10:34,B: Reframing Risks,1,291,291
+792,1/19/21 10:36,B: Reframing Risks,1,292,292
+793,1/19/21 10:37,A2: Social Proof,2,101,202
+794,1/19/21 10:39,B2: Reframing Risks,1,75,176
+795,1/19/21 10:40,B: Reframing Risks,1,293,293
+796,1/19/21 10:43,B: Reframing Risks,1,294,294
+797,1/19/21 10:44,A2: Social Proof,1,102,203
+798,1/19/21 10:47,B2: Reframing Risks,1,76,177
+799,1/19/21 10:48,A: Social Proof,1,280,280
+800,1/19/21 10:49,A: Social Proof,1,281,281
+801,1/19/21 10:51,B2: Reframing Risks,1,77,178
+802,1/19/21 10:57,B: Reframing Risks,1,295,295
+803,1/19/21 10:59,B2: Reframing Risks,1,78,179
+804,1/19/21 11:00,A: Social Proof,1,282,282
+805,1/19/21 11:03,A2: Social Proof,1,103,204
+806,1/19/21 11:06,A: Social Proof,1,283,283
+807,1/19/21 11:06,B: Reframing Risks,1,296,296
+808,1/19/21 11:08,A: Social Proof,1,284,284
+809,1/19/21 11:09,B: Reframing Risks,1,297,297
+810,1/19/21 11:13,B: Reframing Risks,1,298,298
+811,1/19/21 11:13,B2: Reframing Risks,1,79,180
+812,1/19/21 11:16,A: Social Proof,1,285,285
+813,1/19/21 11:18,A2: Social Proof,1,104,205
+814,1/19/21 11:19,B: Reframing Risks,1,299,299
+815,1/19/21 11:20,A: Social Proof,1,286,286
+816,1/19/21 11:21,B2: Reframing Risks,1,80,181
+817,1/19/21 11:22,A: Social Proof,1,287,287
+818,1/19/21 11:24,B: Reframing Risks,1,300,300
+819,1/19/21 11:26,B: Reframing Risks,1,301,301
+820,1/19/21 11:27,B: Reframing Risks,1,302,302
+821,1/19/21 11:28,B2: Reframing Risks,1,81,182
+822,1/19/21 11:29,B2: Reframing Risks,1,82,183
+823,1/19/21 11:33,A: Social Proof,1,288,288
+824,1/19/21 11:35,A2: Social Proof,1,105,206
+825,1/19/21 11:36,A: Social Proof,1,289,289
+826,1/19/21 11:39,B: Reframing Risks,1,303,303
+827,1/19/21 11:41,A2: Social Proof,1,106,207
+828,1/19/21 11:42,A2: Social Proof,1,107,208
+829,1/19/21 11:43,A2: Social Proof,1,108,209
+830,1/19/21 11:43,B2: Reframing Risks,1,83,184
+831,1/19/21 11:47,A: Social Proof,1,290,290
+832,1/19/21 11:48,B2: Reframing Risks,1,84,185
+833,1/19/21 11:52,A2: Social Proof,1,109,210
+834,1/19/21 11:53,A2: Social Proof,1,110,211
+835,1/19/21 11:55,B: Reframing Risks,1,304,304
+836,1/19/21 11:56,B: Reframing Risks,1,305,305
+837,1/19/21 12:04,B: Reframing Risks,1,306,306
+838,1/19/21 12:06,B2: Reframing Risks,1,85,186
+839,1/19/21 12:10,A2: Social Proof,1,111,212
+840,1/19/21 12:19,B: Reframing Risks,1,307,307
+841,1/19/21 12:20,A: Social Proof,1,291,291
+842,1/19/21 12:21,B2: Reframing Risks,1,86,187
+843,1/19/21 12:35,A2: Social Proof,1,112,213
+844,1/19/21 12:36,B: Reframing Risks,1,308,308
+845,1/19/21 12:37,A2: Social Proof,1,113,214
+846,1/19/21 12:41,B: Reframing Risks,1,309,309
+847,1/19/21 12:44,A: Social Proof,1,292,292
+848,1/19/21 12:44,B2: Reframing Risks,1,87,188
+849,1/19/21 12:45,B: Reframing Risks,1,310,310
+850,1/19/21 12:45,B2: Reframing Risks,1,88,189
+851,1/19/21 12:49,A2: Social Proof,1,114,215
+852,1/19/21 12:51,A: Social Proof,1,293,293
+853,1/19/21 12:51,A2: Social Proof,2,116,217
+854,1/19/21 12:53,A2: Social Proof,1,117,218
+855,1/19/21 12:53,B2: Reframing Risks,1,89,190
+856,1/19/21 12:54,A2: Social Proof,1,118,219
+857,1/19/21 12:54,B: Reframing Risks,1,311,311
+858,1/19/21 12:54,B2: Reframing Risks,4,93,194
+859,1/19/21 12:55,B2: Reframing Risks,1,94,195
+860,1/19/21 12:56,A2: Social Proof,3,121,222
+861,1/19/21 12:58,B2: Reframing Risks,1,95,196
+862,1/19/21 12:59,B2: Reframing Risks,1,96,197
+863,1/19/21 13:00,B2: Reframing Risks,1,97,198
+864,1/19/21 13:02,A2: Social Proof,1,122,223
+865,1/19/21 13:02,B2: Reframing Risks,1,98,199
+866,1/19/21 13:03,A2: Social Proof,1,123,224
+867,1/19/21 13:04,A2: Social Proof,2,125,226
+868,1/19/21 13:06,B2: Reframing Risks,1,99,200
+869,1/19/21 13:12,A2: Social Proof,2,127,228
+870,1/19/21 13:14,A2: Social Proof,2,129,230
+871,1/19/21 13:16,A: Social Proof,1,294,294
+872,1/19/21 13:16,A2: Social Proof,1,130,231
+873,1/19/21 13:17,B: Reframing Risks,1,312,312
+874,1/19/21 13:17,B2: Reframing Risks,1,100,201
+875,1/19/21 13:18,A2: Social Proof,1,131,232
+876,1/19/21 13:20,A2: Social Proof,1,132,233
+877,1/19/21 13:21,B2: Reframing Risks,1,101,202
+878,1/19/21 13:23,A2: Social Proof,1,133,234
+879,1/19/21 13:23,B2: Reframing Risks,1,102,203
+880,1/19/21 13:25,A2: Social Proof,1,134,235
+881,1/19/21 13:25,B: Reframing Risks,1,313,313
+882,1/19/21 13:26,B2: Reframing Risks,1,103,204
+883,1/19/21 13:28,A: Social Proof,1,295,295
+884,1/19/21 13:30,A: Social Proof,1,296,296
+885,1/19/21 13:31,A: Social Proof,1,297,297
+886,1/19/21 13:31,A2: Social Proof,1,135,236
+887,1/19/21 13:31,B: Reframing Risks,1,314,314
+888,1/19/21 13:32,B: Reframing Risks,1,315,315
+889,1/19/21 13:33,A2: Social Proof,1,136,237
+890,1/19/21 13:35,B: Reframing Risks,1,316,316
+891,1/19/21 13:37,A: Social Proof,1,298,298
+892,1/19/21 13:37,B2: Reframing Risks,1,104,205
+893,1/19/21 13:40,B2: Reframing Risks,1,105,206
+894,1/19/21 13:41,A2: Social Proof,1,137,238
+895,1/19/21 13:41,B: Reframing Risks,1,317,317
+896,1/19/21 13:43,A2: Social Proof,1,138,239
+897,1/19/21 13:44,A: Social Proof,1,299,299
+898,1/19/21 13:45,A2: Social Proof,1,139,240
+899,1/19/21 13:47,B: Reframing Risks,1,318,318
+900,1/19/21 13:51,A2: Social Proof,1,140,241
+901,1/19/21 13:52,B: Reframing Risks,1,319,319
+902,1/19/21 13:54,A2: Social Proof,1,141,242
+903,1/19/21 13:57,B2: Reframing Risks,1,106,207
+904,1/19/21 13:58,A2: Social Proof,1,142,243
+905,1/19/21 13:58,B2: Reframing Risks,1,107,208
+906,1/19/21 13:59,A2: Social Proof,2,144,245
+907,1/19/21 14:00,A2: Social Proof,1,145,246
+908,1/19/21 14:01,A2: Social Proof,1,146,247
+909,1/19/21 14:06,A2: Social Proof,1,147,248
+910,1/19/21 14:08,A: Social Proof,1,300,300
+911,1/19/21 14:09,A2: Social Proof,1,148,249
+912,1/19/21 14:10,B: Reframing Risks,1,320,320
+913,1/19/21 14:10,B2: Reframing Risks,1,108,209
+914,1/19/21 14:22,A: Social Proof,1,301,301
+915,1/19/21 14:24,A: Social Proof,1,302,302
+916,1/19/21 14:24,B2: Reframing Risks,1,109,210
+917,1/19/21 14:29,A: Social Proof,1,303,303
+918,1/19/21 14:32,A: Social Proof,1,304,304
+919,1/19/21 14:33,B: Reframing Risks,1,321,321
+920,1/19/21 14:35,A2: Social Proof,1,149,250
+921,1/19/21 14:36,A: Social Proof,2,306,306
+922,1/19/21 14:41,A2: Social Proof,1,150,251
+923,1/19/21 14:45,B2: Reframing Risks,1,110,211
+924,1/19/21 14:51,A: Social Proof,1,307,307
+925,1/19/21 14:52,A: Social Proof,1,308,308
+926,1/19/21 14:56,B2: Reframing Risks,1,111,212
+927,1/19/21 14:58,A2: Social Proof,1,151,252
+928,1/19/21 15:03,B: Reframing Risks,1,322,322
+929,1/19/21 15:04,B2: Reframing Risks,1,112,213
+930,1/19/21 15:05,A: Social Proof,1,309,309
+931,1/19/21 15:07,B: Reframing Risks,1,323,323
+932,1/19/21 15:12,B: Reframing Risks,2,325,325
+933,1/19/21 15:16,A2: Social Proof,1,152,253
+934,1/19/21 15:17,A: Social Proof,1,310,310
+935,1/19/21 15:18,A2: Social Proof,1,153,254

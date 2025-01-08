@@ -1,6 +1,26 @@
-# Peer review
+---
+title: verander strakjes
+author: Yusra Kunduzi
+---
+titel en auteur erbij?
 
-```{r}
+# Review and Reproducibility
+
+## Open Peer Review
+
+**SARS-CoV-2 variants reveal features critical for replication in primary human cells**
+
+
+Since the emergence of the COVID-19 virus and the millions of people it infected, the amount of research on it has increased. Part of this research focuses on genome sequencing to identify various variants, but there has been limited research on how these mutations affect processes like virus replication or transmission. This article presents research on 14 different SARS-CoV-2 variants that emerged during the early stages of the pandemic in Europe. The goal of this research was to gain a better understanding of these variants. To achieve this, the variants were isolated from anonymized patient samples collected in Switzerland between March and May 2020. These samples were cultured in Vero-CCL81 cells, and primary bronchial epithelial cells (BEpCs) from three different human donors were also used to grow the variants. The virus was cultured through multiple passages in Vero-CCL81 cells to generate viral stocks.
+
+The viral growth, genetic variants, and specific mutations, such as those in the Spike protein and other genes, were analyzed using sequencing and phenotypic assays. The full genome sequencing was performed using next-generation sequencing (NGS) methods. The results showed that certain mutations, such as the D614G substitution in the Spike protein, were associated with enhanced replication in human cells. Additionally, mutations that occurred during passage in Vero cells, such as deletions in the furin cleavage site, strongly affected replication in BEpCs. This highlights the importance of carefully checking viral stocks when studying new variants.
+
+Statistical significance was determined using one-way ANOVA and unpaired t-tests on log2-transformed data. The research was conducted in a BSL3 facility, with all procedures, including risk assessments and protective measures, approved by the Swiss Federal Office of Public Health. All relevant data are available through GISAID (accession IDs EPI_ISL_590823 to EPI_ISL_590836). Although the article does not provide specific information on the availability of the code used, it offers extensive methodological details and transparency in the results.
+
+@pohlSARSCoV2VariantsReveal2021
+
+
+```{r peer review, echo=FALSE}
 # Making the data frame
 peerreview <- data.frame(
   `Transparency Criteria` = c(
@@ -24,14 +44,14 @@ peerreview <- data.frame(
     "Authors have shared access to the most updated code that they used in their study, including code used for analysis."
   ),
   `Response Type` = c(
-    "Binary",
-    "Binary",
-    "Found Value",
-    "Binary; Found Value",
-    "Found Value",
-    "Binary",
-    "Binary",
-    "Binary"
+    "Yes",
+    "Yes",
+    "All SARS-CoV-2 isolate sequences are available from GISAID (accession IDs EPI_ISL_590823 to EPI_ISL_590836)",
+    "Yes; Switzerland (Zurich)",
+    "E-mail addresses for multiple autors are provided",
+    "No",
+    "Yes",
+    "No"
   )
 )
 
@@ -41,11 +61,67 @@ kable(peerreview, caption = "Peer Review Transparency Criteria Table")
 
 ```
 
-reference toevoegen
-SARS-CoV-2 variants reveal features critical for replication in primary human cells
 
-Write an Rmarkdown report on your findings, including the table above and some information about the article such as general aim, short methods and results. If data is available, try including some
-Store the source Rmd and knitted HTML in a folder called ‘Rmd’ in your course RStudio project. You will need it again later in the course
+## Reprocudibility assessment
+
+Reproducibility in research is necessary as it allows other researchers to use the data and code for their own work. Unfortunately, the data or code isn’t always accessible, sometimes hindering progress. Even when both are available, it’s important to assess whether the code is truly reproducible. This is why I reviewed a paper titled *"Effect of Targeted Behavioral Science Messages on COVID-19 Vaccination Registration Among Employees of a Large Health System"* on PubMed. 
+
+The code and data for this study were available on OSF, with one file for the scripts and three files for the data. After reviewing the code, I would rate its readability a 3/5. While the code is not bad, it could be clearer. Some variable names were understandable, but as the number of variables increased, they became less clear. The code could also benefit from more consistent comments.
 
 
+
+The reproducibility of the code is a 5/5. The three lines for importing the data, with placeholders for file paths like “INSERT PATH HERE” were clear. After inserting my own file paths, the code ran without issues, generating a bar chart identical to the one in the paper. The code first loads the datasets, then summarizes key variables like registration numbers, email opens, clicks, and deliveries. After preparing and cleaning the data,  it generates three bar charts for visualisation.
+
+
+
+
+```{r reproducible research, message=FALSE, warning=FALSE}
+
+library(dplyr)
+library(psych)
+library(gmodels)
+library(zoo) ## for working with dates
+library(chron) ##for working with dates
+library(ggplot2)
+library(effects) ## for CI
+library(DT) ## for tables
+library(RColorBrewer) ## for survey plot
+
+VAC.SURVEY.PATH <- "C:/Users/yusra/OneDrive/Documenten/dsfb2_workflows_portfolio/ruwe_data/COVID_Vaccine_Employee_Survey_20210202_OSF.csv"
+
+
+VAC.SURVEY <- read.csv(gsub("[\r\n]", "", VAC.SURVEY.PATH), header = TRUE,
+                          na.strings = c("", "N/A", "NA"))
+
+total <- nrow(VAC.SURVEY)
+freq_table <- data.frame(table(VAC.SURVEY$main))
+names(freq_table) <- c("Codes", "Freq")
+
+tmp <- freq_table %>% arrange(Freq)
+freq_table$Codes <- factor(freq_table$Codes, levels = tmp$Codes)
+freq_table$Perc <- paste(round((freq_table$Freq/total)*100,1), "%", sep = "")
+
+ggplot(freq_table, aes(x = Codes, y = Freq, fill = Codes)) +
+    geom_bar(stat = 'identity', position = position_dodge(), color = 'black') + 
+    theme_classic() +
+    theme(axis.text.x = element_text(vjust = 1, hjust = 1),
+          axis.text = element_text(size = 7, color = 'black'),
+          strip.text = element_text(size = 7),
+          axis.title = element_text(size = 7),
+          axis.title.y = element_text(margin = unit(c(5, 0, 0, 0, 0), "mm")),
+          legend.position = 'none') + xlab("") + ylab("\nNumber of respondents") +
+    geom_text(aes(label=Perc), size=3, position=position_dodge(width=0.9), 
+              hjust=-0.2, color='black') +
+    scale_fill_manual(values = c('white', 'white', 'white', 'white', 
+                                 'white', 'white', 'white', 'white', 
+                                 'white', 'white', 'white',
+                                 "#1B7837", "#5AAE61", "#A6DBA0", 
+                                 "#D9F0D3", "#F7F7F7", "#E7D4E8", 
+                                 "#C2A5CF", "#9970AB", "#762A83")) + 
+    coord_flip() +
+    ylim(c(0, max(freq_table$Freq)*1.3))
+
+```
+
+*Figure X: titel en bijschrift*
 

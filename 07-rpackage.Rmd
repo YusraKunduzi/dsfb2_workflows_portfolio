@@ -1,3 +1,55 @@
 # New Rpackage
 
-text.analyzer
+**text.analyzer Package**
+
+The text.analyzer package simplifies text analysis in R. It provides a set of functions to quickly analyze text data, such as word and sentence counts, identifying the longest word, and extracting the most frequent words. The package is designed to be efficient, allowing users to perform basic text analysis tasks without the need for complex setups.
+
+
+**Development of the text.analyzer Package**
+
+I started developing the text.analyzer package by creating a new R package project with devtools::create_package(). This automatically set up the file structure and made the project ready to use in RStudio.
+
+The first function I added was text_summary(), which summarizes text data. I documented it using roxygen2 and ran devtools::check() to fix any issues. After that, I added more functions, like longest_word(), top10_words(), and sentence_summary(), following the same process: writing the function, documenting it, testing it, and fixing any problems.
+
+Once the package was complete, I installed it locally with devtools::install() to make sure everything worked as expected. I also created a vignette in RMarkdown, placed it in the vignettes/ folder, and built it using devtools::build_vignettes(). This made the vignette accessible through browseVignettes().
+
+Finally, I uploaded the package to GitHub, set up continuous integration, and added a README.md file with installation instructions and examples to help users get started.
+
+**Installing text.analyzer**
+
+```r
+# Install using devtools
+devtools::install_github("YusraKunduzi/text.analyzer")
+
+# Install using pak (preferred for dependency management)
+pak::pak("YusraKunduzi/text.analyzer")
+```
+
+**Usage**
+
+``` {r examples}
+library(text.analyzer)
+
+#Example text, the first paragraph of this page
+text <- "The text.analyzer package simplifies text analysis in R. It provides a set of functions to quickly analyze text data, such as word and sentence counts, identifying the longest word, and extracting the most frequent words. The package is designed to be efficient, allowing users to perform basic text analysis tasks without the need for complex setups."
+
+#How to use text_summary
+sum <- text_summary(text)
+print(sum)
+
+#How to use longest_word
+longest <- longest_word(text)
+print(longest)
+
+#How to use top10_words
+top <- top10_words(text)
+print(top)
+
+#How to use sentence_summary
+sentences <- sentence_summary(text)
+print(sentences)
+
+
+```
+
+

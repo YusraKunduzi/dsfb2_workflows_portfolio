@@ -23,7 +23,7 @@
 <meta name="author" content="Yusra Kunduzi" />
 
 
-<meta name="date" content="2025-01-08" />
+<meta name="date" content="2025-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -195,7 +195,88 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="new-rpackage" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">8</span> New Rpackage<a href="new-rpackage.html#new-rpackage" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>text.analyzer</p>
+<p><strong>text.analyzer Package</strong></p>
+<p>The text.analyzer package simplifies text analysis in R. It provides a set of functions to quickly analyze text data, such as word and sentence counts, identifying the longest word, and extracting the most frequent words. The package is designed to be efficient, allowing users to perform basic text analysis tasks without the need for complex setups.</p>
+<p><strong>Development of the text.analyzer Package</strong></p>
+<p>I started developing the text.analyzer package by creating a new R package project with devtools::create_package(). This automatically set up the file structure and made the project ready to use in RStudio.</p>
+<p>The first function I added was text_summary(), which summarizes text data. I documented it using roxygen2 and ran devtools::check() to fix any issues. After that, I added more functions, like longest_word(), top10_words(), and sentence_summary(), following the same process: writing the function, documenting it, testing it, and fixing any problems.</p>
+<p>Once the package was complete, I installed it locally with devtools::install() to make sure everything worked as expected. I also created a vignette in RMarkdown, placed it in the vignettes/ folder, and built it using devtools::build_vignettes(). This made the vignette accessible through browseVignettes().</p>
+<p>Finally, I uploaded the package to GitHub, set up continuous integration, and added a README.md file with installation instructions and examples to help users get started.</p>
+<p><strong>Installing text.analyzer</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="new-rpackage.html#cb3-1" tabindex="-1"></a><span class="co"># Install using devtools</span></span>
+<span id="cb3-2"><a href="new-rpackage.html#cb3-2" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;YusraKunduzi/text.analyzer&quot;</span>)</span>
+<span id="cb3-3"><a href="new-rpackage.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="new-rpackage.html#cb3-4" tabindex="-1"></a><span class="co"># Install using pak (preferred for dependency management)</span></span>
+<span id="cb3-5"><a href="new-rpackage.html#cb3-5" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">&quot;YusraKunduzi/text.analyzer&quot;</span>)</span></code></pre></div>
+<p><strong>Usage</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="new-rpackage.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(text.analyzer)</span>
+<span id="cb4-2"><a href="new-rpackage.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="new-rpackage.html#cb4-3" tabindex="-1"></a><span class="co">#Example text, the first paragraph of this page</span></span>
+<span id="cb4-4"><a href="new-rpackage.html#cb4-4" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">&quot;The text.analyzer package simplifies text analysis in R. It provides a set of functions to quickly analyze text data, such as word and sentence counts, identifying the longest word, and extracting the most frequent words. The package is designed to be efficient, allowing users to perform basic text analysis tasks without the need for complex setups.&quot;</span></span>
+<span id="cb4-5"><a href="new-rpackage.html#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="new-rpackage.html#cb4-6" tabindex="-1"></a><span class="co">#How to use text_summary</span></span>
+<span id="cb4-7"><a href="new-rpackage.html#cb4-7" tabindex="-1"></a>sum <span class="ot">&lt;-</span> <span class="fu">text_summary</span>(text)</span>
+<span id="cb4-8"><a href="new-rpackage.html#cb4-8" tabindex="-1"></a><span class="fu">print</span>(sum)</span></code></pre></div>
+<pre><code>## $word_count
+## [1] 56
+## 
+## $sentence_count
+## [1] 4
+## 
+## $average_word_length
+## [1] 5.285714
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;text_summary&quot;</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="new-rpackage.html#cb6-1" tabindex="-1"></a><span class="co">#How to use longest_word</span></span>
+<span id="cb6-2"><a href="new-rpackage.html#cb6-2" tabindex="-1"></a>longest <span class="ot">&lt;-</span> <span class="fu">longest_word</span>(text)</span>
+<span id="cb6-3"><a href="new-rpackage.html#cb6-3" tabindex="-1"></a><span class="fu">print</span>(longest)</span></code></pre></div>
+<pre><code>## $word
+## [1] &quot;text.analyzer&quot;
+## 
+## $length
+## [1] 13
+## 
+## $position
+## $position$line
+## [1] 1
+## 
+## $position$index
+## [1] 2</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="new-rpackage.html#cb8-1" tabindex="-1"></a><span class="co">#How to use top10_words</span></span>
+<span id="cb8-2"><a href="new-rpackage.html#cb8-2" tabindex="-1"></a>top <span class="ot">&lt;-</span> <span class="fu">top10_words</span>(text)</span>
+<span id="cb8-3"><a href="new-rpackage.html#cb8-3" tabindex="-1"></a><span class="fu">print</span>(top)</span></code></pre></div>
+<pre><code>##       words Freq
+## 1      text    3
+## 2        to    3
+## 3  analysis    2
+## 4   package    2
+## 5      word    2
+## 6  allowing    1
+## 7   analyze    1
+## 8        as    1
+## 9     basic    1
+## 10       be    1</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="new-rpackage.html#cb10-1" tabindex="-1"></a><span class="co">#How to use sentence_summary</span></span>
+<span id="cb10-2"><a href="new-rpackage.html#cb10-2" tabindex="-1"></a>sentences <span class="ot">&lt;-</span> <span class="fu">sentence_summary</span>(text)</span>
+<span id="cb10-3"><a href="new-rpackage.html#cb10-3" tabindex="-1"></a><span class="fu">print</span>(sentences)</span></code></pre></div>
+<pre><code>## $sentence_count
+## [1] 4
+## 
+## $avg_sentence_length
+## [1] 14.25
+## 
+## $longest_sentence
+## [1] &quot; It provides a set of functions to quickly analyze text data, such as word and sentence counts, identifying the longest word, and extracting the most frequent words&quot;
+## 
+## $shortest_sentence
+## [1] &quot;The text&quot;
+## 
+## $readability_score
+## [1] -254.8002
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;sentence_summary&quot;</code></pre>
 
 </div>
             </section>

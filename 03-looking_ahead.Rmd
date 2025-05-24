@@ -2,17 +2,18 @@
 
 **Where do I want to be in ~2 years time?**
 
-In two years time i expect myself to be recently graduated from Hogeschool Utrecht (Life Science). I will work at a company focused on research within the life sciences, specifically in a department that specializes in microbiological research, where I am also able to apply my data science skills. I expect to be more confident in my data science and researching skills.
-Looking even further ahead, I plan on leading research projects in my field and publish my findings to contribute to the scientific community. .
+A few months from now, I will graduate from the Life Sciences program at Hogeschool Utrecht. After that, I would like to start working in a laboratory environment, ideally in a research setting focused on microbiology. I'm especially interested in combining practical lab work with data analysis, such as working with NGS data, so I can apply both my experimental and data science skills.
+
+As far as I can see now, my plan is to work for one or two years to gain more experience and discover what kind of work suits me best. Who knows, during that time I might find a master’s program that really inspires me and decide to continue studying, but for now, my main goal is to start working and developing myself professionally.
 
 ---
 
 **How am I doing now with respect to this goal?**
 
-I’m well on my way to achieving my goals. Sometimes, I don’t fully realize how much I’ve learned over the past few years, but I often surprise myself when I excel at my work. I’m currently focusing on enhancing my data science skills and I will begin my research internship in February, which is the final phase of my studies before graduation.
+I’m well on my way to achieving my goals. Looking back, I sometimes don’t realize how much I’ve learned over the past few years, but I often surprise myself with what I’m capable of. I’m currently doing my research internship, the final phase of my studies before graduation, where I’m working with NGS data and focusing on further developing my data science and bioinformatics skills.
 
 ---
 
 **What would be the next skill to learn?**
 
-One skill I’m excited to develop is working in larger teams after I graduate. Although I've had experience working in smaller groups, which has gone well, I look forward to collaborating with a larger team and learning how to navigate that dynamic effectively.
+I would like to gain more hands-on experience with next-generation sequencing (NGS) in the lab. So far, I’ve mainly worked with NGS data during the analysis phase, but I’m really interested in learning how to carry out the full process from sample preparation to library construction and running the sequencer. In addition to that, I’d like to strengthen other general lab skills to become more confident in an experimental setting. My goal is to better connect what happens in the lab to the data I analyze, so I can understand the full workflow from sample to result and make more informed decisions during analysis.

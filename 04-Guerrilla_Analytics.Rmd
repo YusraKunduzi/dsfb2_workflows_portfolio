@@ -9,4 +9,4 @@ For my DAUR2 RNA sequencing and metagenomics assignments, I applied guerrilla an
 ![](images/directorytree3.png)
 
 
-*Figure 2: Directory tree of the DAUR2 course.*
+*Figure 6: Directory tree of the DAUR2 course.*

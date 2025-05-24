@@ -1,9 +1,3 @@
----
-title: verander strakjes
-author: Yusra Kunduzi
----
-titel en auteur erbij?
-
 # Review and Reproducibility
 
 ## Open Peer Review

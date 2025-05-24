@@ -8,6 +8,10 @@ output:
   bookdown::gitbook: default
   html_document: default
 bibliography: My_Library.bib
+params:
+  country: "Greece"
+  year: 2022
+  month: 2
 ---
 
 

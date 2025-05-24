@@ -1,7 +1,364 @@
-# Het effect van transposons op biologische processen van de E. coli
- 
-Voor mijn vrije opdracht wil ik het effect van transposons op bacteriën onderzoeken. Aangezien mijn afstudeerrichting microbiologie is, sluit dit onderwerp er goed bij aan. De ruwe data die ik zal gebruiken komt van GEO, onder de accession GSE197084. In dit onderzoek werd het effect van transposons op de virulentie van Escherichia coli bestudeerd. Het genoom van E. coli werd eerst gesequenced, waarna transposons werden geïntroduceerd. De gemuteerde bacteriën werden vervolgens geïmplanteerd in de hersenen, milt en longen van muizen om de effecten van de gemuteerde bacteriën in verschillende omgevingen te bestuderen. Na de infectie werden de bacteriën opnieuw gesequenced.
+# Gut Microbiome Analysis in Crohn’s Disease Using Snakemake and QIIME2
 
-Mijn doel is om de data van de E. coli voor en na transposon-insertie te vergelijken en een bredere analyse te maken van de genen en biologische processen die mogelijk zijn beïnvloed door de transposons. Ik ben niet alleen geïnteresseerd in virulentie-gerelateerde genen, maar wil ook onderzoeken hoe andere genetische processen mogelijk zijn aangepast door de transposons.
+The human gut microbiome plays an important role in maintaining overall health. It helps with digestion, nutrient absorption, and keeping the immune system balanced. When this microbial balance is disturbed, it can contribute to long-term health problems. One example is Crohn’s disease, a condition in which both the immune system and the gut microbiome appear to be disrupted.
 
-Voor de analyse zal ik ongeveer dezelfde workflow gebruiken als in DAUR2. Ik zal de analyse volledig uitvoeren in Python en daarbij ook andere technieken gebruiken, zoals BWA i.p.v. Bowtie2 of Rsubread, en Sambamba i.p.v. Rsamtools. Door deze tools te gebruiken, kan ik de analyse in een andere programmeertaal uitvoeren en tegelijkertijd de methoden en concepten die ik tijdens de cursus heb geleerd toepassen.
+
+To better understand the potential microbial shifts associated with Crohn’s disease, publicly available 16S rRNA sequencing data from the GSE162844 dataset was analyzed. This dataset includes fecal samples from individuals diagnosed with Crohn’s disease as well as healthy controls. The goal of this project was to explore gut microbiome composition and diversity in these two groups using a reproducible workflow built with QIIME2 and Snakemake.
+
+
+**Snakemake and QIIME2 workflow**
+
+
+Although Snakemake is mainly based on Python, it is very flexible and can work with tools beyond Python code. It can run external programs like QIIME2 by using shell commands. QIIME2 is a popular microbiome analysis platform used to process raw 16S rRNA gene sequencing data, especially for studying microbial diversity. In a Snakemake workflow, each QIIME2 step with its input and output files, can be defined as a separate rule. This setup enables automated and efficient processing of sequencing data, from initial raw data handling to final analysis and identification of microbial species.
+
+
+**Prerequisites**
+
+This analysis was performed in VS Code using an Ubuntu terminal running through WSL. For the installation of QIIME2, a conda environment was created. Within the same environment, a compatible version of Snakemake was installed. The latest version of QIIME2 is 2025.4, which is compatible with Snakemake version 7.32.4 that runs on Python 3.10.
+
+QIIME 2 was installed following the official [QIIME2 - 2025.4 installation guide](https://library.qiime2.org/quickstart/amplicon).
+
+
+For the QIIME 2 analysis, a SILVA classifier is required. This is a pre-trained model used to assign 16S rRNA sequences to bacterial taxonomies. The dataset from GSE162844 focuses on the gut microbiome, specifically the V3–V4 regions. For this analysis, the silva-138-99-nb-classifier.qza was used, as it is compatible with the current QIIME 2 version and suitable for this region of the 16S gene.
+
+
+## The snakemake pipeline
+
+To run the snakefile, the following command was used: snakemake --cores 1
+
+The taxonomy classification step can utilize multiple cores but is very demanding on system resources, so the number of cores was limited to 1 to ensure stable and reliable execution.
+
+
+**Rule all and data import**
+```
+rule all:
+    input:
+        "taxa-bar-plots_deblur.qzv",
+        "demux-paired-end.qzv",
+        "demux-filter-stats.qzv", 
+        "deblur-stats.qzv", 
+        "table-deblur.qzv",
+        "rep-seqs-deblur.qzv", 
+        "aligned-rep-seqs.qza", 
+        "masked-aligned-rep-seqs.qza",  
+        "unrooted-tree.qza", 
+        "rooted-tree.qza", 
+        "core-metrics-results_deblur_250_metadata_100", 
+        "alpha-rarefaction.qzv", 
+        "taxonomy_deblur.qzv"    
+
+rule import_data:
+    input:
+        manifest = "paired-end-manifest.csv"
+    output:
+        demux_paired_end = "demux-paired-end.qza"
+    shell:
+        """
+        qiime tools import \
+          --type 'SampleData[PairedEndSequencesWithQuality]' \
+          --input-path {input.manifest} \
+          --output-path {output.demux_paired_end} \
+          --input-format PairedEndFastqManifestPhred33V2
+        """
+```
+
+The first code chunk of a Snakefile always contains a rule all. This rule specifies the final target files that the workflow aims to generate. When you run Snakemake, it checks which of these output files already exist and will skip any steps that produce files already present. This makes the workflow more efficient by avoiding unnecessary computations.
+
+Following rule all, the pipeline typically starts with the import_data step, where raw sequencing data is imported into QIIME2’s format. In this case, the input is a manifest file listing paired-end sequence files, and the output is a demultiplexed artifact (demux-paired-end.qza). “Demultiplexed” means the sequences have been separated by sample based on their barcodes, so each sequence is correctly assigned to its original sample.
+
+<br>
+**Quality Control**
+
+```
+rule demux_summarize:
+    input:
+        demux_paired_end = "demux-paired-end.qza"
+    output:
+        demux_paired_end_vis = "demux-paired-end.qzv"
+    shell:
+        """
+        qiime demux summarize \
+        --i-data {input.demux_paired_end} \
+        --o-visualization {output.demux_paired_end_vis}
+        """
+
+rule quality_filter:
+    input:
+        demux_paired_end = "demux-paired-end.qza"
+    output:
+        demux_filtered_seq = "demux-filtered-seq.qza",
+        demux_filtered_stats = "demux-filter-stats.qza"
+    shell:
+       """
+       qiime quality-filter q-score \
+       --i-demux {input.demux_paired_end} \
+       --o-filtered-sequences {output.demux_filtered_seq} \
+       --o-filter-stats {output.demux_filtered_stats}
+       """
+
+rule quality_visualize:
+    input:
+        demux_filtered_stats_qza = "demux-filter-stats.qza"
+    output: 
+        demux_filtered_stats_qzv = "demux-filter-stats.qzv"
+    shell:
+        """
+        qiime metadata tabulate \
+        --m-input-file {input.demux_filtered_stats_qza} \
+        --o-visualization {output.demux_filtered_stats_qzv}
+        """
+```
+These steps focus on importing the sequencing data and assessing its quality. The demultiplexed sequences are summarized to get an overview, then filtered to remove low-quality reads, and the filtering results are visualized to ensure data reliability before further analysis.
+
+
+<br>
+**Denoising and Feature Table Processing**
+
+```
+
+rule deblur_denoise:
+    input:
+        demux_filtered_seq = "demux-filtered-seq.qza"
+    output:
+        rep_seqs = "rep-seqs-deblur.qza",
+        table_deblur = "table-deblur.qza",
+        deblur_stats = "deblur-stats.qza"
+    shell:
+        """
+        qiime deblur denoise-16S \
+        --i-demultiplexed-seqs {input.demux_filtered_seq} \
+        --p-trim-length 250  \
+        --o-representative-sequences {output.rep_seqs} \
+        --o-table {output.table_deblur} \
+        --p-sample-stats \
+        --o-stats {output.deblur_stats}
+        """
+
+rule deblur_visualize: 
+    input:
+        deblur_stats_qza = "deblur-stats.qza"
+    output:
+        deblur_stats_qzv = "deblur-stats.qzv"
+    shell:
+        """
+        qiime deblur visualize-stats \
+        --i-deblur-stats {input.deblur_stats_qza} \
+        --o-visualization {output.deblur_stats_qzv}
+        """
+
+rule feature_table:
+    input:
+        deblur_qza = "table-deblur.qza",
+        metadata = "metadata.txt"
+    output:
+        deblur_qzv = "table-deblur.qzv"
+    shell:
+        """
+        qiime feature-table summarize \
+        --i-table {input.deblur_qza} \
+        --o-visualization {output.deblur_qzv} \
+        --m-sample-metadata-file {input.metadata}
+        """
+
+rule filter_table:
+    input:
+        table = "table-deblur.qza"
+    output:
+        filtered_table = "table-deblur_filtered.qza"
+    shell:
+        """
+        qiime feature-table filter-features \
+          --i-table {input.table} \
+          --p-min-frequency 10 \
+          --o-filtered-table {output.filtered_table}
+        """
+
+rule filter_rep_seqs:
+    input:
+        rep_seqs = "rep-seqs-deblur.qza",
+        table = "table-deblur_filtered.qza"
+    output:
+        rep_seqs_filtered = "rep-seqs-deblur_filtered.qza"
+    shell:
+        """
+        qiime feature-table filter-seqs \
+          --i-data {input.rep_seqs} \
+          --i-table {input.table} \
+          --o-filtered-data {output.rep_seqs_filtered}
+        """
+
+rule feature_table_tabulate:
+    input:
+        rep_seqs_qza = "rep-seqs-deblur.qza"
+    output:
+        rep_seqs_qzv = "rep-seqs-deblur.qzv"
+    shell:
+        """
+        qiime feature-table tabulate-seqs \
+        --i-data {input.rep_seqs_qza} \
+        --o-visualization {output.rep_seqs_qzv}
+        """
+```
+This section cleans the sequencing data by removing noise and errors, producing high-quality representative sequences and feature tables. The resulting data is then filtered to exclude rare features, and visualizations are created to explore the sequence features.
+
+
+<br>
+**Phylogenetic Analysis and Diversity Metrics**
+
+```
+
+rule phylogenetic_diversity: 
+    input:
+        rep_seqs = "rep-seqs-deblur.qza"
+    output:
+        aligned_reps = "aligned-rep-seqs.qza",
+        masked_aligned_reps = "masked-aligned-rep-seqs.qza",
+        unrooted_tree = "unrooted-tree.qza",
+        rooted_tree = "rooted-tree.qza"
+    shell:
+        """
+        qiime phylogeny align-to-tree-mafft-fasttree \
+        --i-sequences {input.rep_seqs} \
+        --o-alignment {output.aligned_reps} \
+        --o-masked-alignment {output.masked_aligned_reps} \
+        --o-tree {output.unrooted_tree} \
+        --o-rooted-tree {output.rooted_tree} \
+        --p-n-threads 16 
+        """
+
+rule diversity_analysis:
+    input:
+        rooted_tree = "rooted-tree.qza",
+        table_deblur = "table-deblur.qza",
+        metadata = "metadata.txt"
+    output:
+        out_dir = directory("core-metrics-results_deblur_250_metadata_100")
+    shell:
+        """
+        qiime diversity core-metrics-phylogenetic \
+          --i-phylogeny {input.rooted_tree} \
+          --i-table {input.table_deblur} \
+          --p-sampling-depth 100 \
+          --m-metadata-file {input.metadata} \
+          --output-dir {output.out_dir}
+        """
+
+rule alpha_rarefaction:
+    input:
+        table_deblur = "table-deblur.qza",
+        rooted_tree = "rooted-tree.qza",
+        metadata = "metadata.txt"
+    output:
+        alpha_rarefaction = "alpha-rarefaction.qzv"
+    shell:
+        """
+        qiime diversity alpha-rarefaction \
+        --i-table {input.table_deblur} \
+        --i-phylogeny {input.rooted_tree} \
+        --p-max-depth 7500 \
+        --m-metadata-file {input.metadata} \
+        --o-visualization {output.alpha_rarefaction}
+        """
+        
+```
+Here, sequences are aligned and used to build phylogenetic trees. Diversity analyses are performed to examine the microbial community composition, including rarefaction analysis to check if the sequencing depth is sufficient for robust results.
+
+
+<br>
+**Taxonomy Assignment and Visualization**
+
+```
+
+rule taxonomy_classifier:
+    input:
+        silva_classifier = "silva-138-99-nb-classifier.qza",
+        rep_seqs = "rep-seqs-deblur_filtered.qza"
+    output:
+        taxonomy_deblur = "taxonomy_deblur.qza"
+    shell:
+        """
+        qiime feature-classifier classify-sklearn \
+        --i-classifier {input.silva_classifier} \
+        --i-reads {input.rep_seqs} \
+        --o-classification {output.taxonomy_deblur} \
+        --p-n-jobs 1
+        """
+
+rule taxonomy_meta_tabulate:
+    input:
+        taxonomy_deblur = "taxonomy_deblur.qza"
+    output:
+        taxonomy_deblur_qzv = "taxonomy_deblur.qzv"
+    shell:
+        """
+        qiime metadata tabulate \
+        --m-input-file {input.taxonomy_deblur} \
+        --o-visualization {output.taxonomy_deblur_qzv}
+        """
+
+rule taxonomy_barplot:
+    input:
+        table_deblur = "table-deblur_filtered.qza",
+        taxonomy_deblur = "taxonomy_deblur.qza",
+        metadata = "metadata.txt"
+    output:
+        tax_barplot = "taxa-bar-plots_deblur.qzv"
+    shell:
+        """
+        qiime taxa barplot \
+        --i-table {input.table_deblur} \
+        --i-taxonomy {input.taxonomy_deblur} \
+        --m-metadata-file {input.metadata} \
+        --o-visualization {output.tax_barplot}
+        """
+```
+In this final part, taxonomy is assigned to the cleaned sequences using a trained classifier. The taxonomic assignments are then visualized and summarized with barplots, providing insight into the microbial composition of the samples.
+
+
+## QIIME2 view
+
+After running the Snakemake workflow, key .qzv visualization files were generated and viewed using QIIME 2 View. These included alpha and beta diversity plots, which help evaluate within-sample diversity and differences between groups, respectively. Because the focus here is on comparing Crohn’s disease samples to healthy controls, beta diversity metrics are the most informative.
+
+The Snakemake rule diversity_analysis produces a folder containing various diversity plots. For this dataset, the most relevant visualizations are: jaccard_emperor.qzv, unweighted_unifrac_emperor.qzv, and weighted_unifrac_emperor.qzv. Each plot gives insight into a different aspect of how the microbiome differs between the groups. The Jaccard plot reflects whether the same species are present or absent between groups. The Unweighted UniFrac plot builds on this by also considering the evolutionary relationships between the species. The Weighted UniFrac plot adds information about species abundance, showing how the relative amounts of microbes differ between the groups.
+
+
+![Figure 2: Jaccard PCoA plot](~/dsfb2_workflows_portfolio/images/jaccard_plotje.png)
+
+
+The Jaccard PCoA plot shows a clear separation between inflamed (red) and non-inflamed (blue) samples, which means that the types of microbes present in each group are different. Since the Jaccard distance looks only at whether a microbe is present or not, this suggests that inflammation is linked to certain microbes appearing or disappearing. The small amount of overlap between the groups shows that inflammation causes a clear change in which microbes are found.
+
+
+![Figure 3: Unweighted unifrac PCoA plot](~/dsfb2_workflows_portfolio/images/unweighted.png)
+
+The Unweighted UniFrac plot shows some separation but also overlap between groups. Like Jaccard, it’s based on which microbes are present, but it also includes how closely related those microbes are. The overlap here means that while some species differ between groups, many of them are still closely related
+
+
+![Figure 4: Weighted unifrac PCoA plot](~/dsfb2_workflows_portfolio/images/weighted.png)
+
+The Weighted UniFrac plot shows the most overlap between inflamed and non-inflamed samples. This means that even though the two groups may differ in which species are present (as shown by the Jaccard plot), they still share many of the same dominant microbes, just in different amounts. 
+
+
+![Figure 5: taxonomy bar plot](~/dsfb2_workflows_portfolio/images/taxa_plot.png)
+
+The taxa bar plot shows the relative abundance of bacterial genera across all samples, grouped by inflammation status. While the plot gives a useful overview of the microbial composition and allows for the identification of present taxa, there is no clear pattern that visually distinguishes inflamed from non-inflamed samples. The microbial profiles appear highly variable between individuals, with substantial overlap between the two groups. As a result, this plot is helpful for exploring taxonomic diversity, but it does not reveal strong group-specific differences on its own. For detecting meaningful shifts between conditions, beta diversity metrics provide more informative results.
+
+## Beta diversity conclusion
+
+The beta diversity analyses of the GSE162844 dataset suggest that there are some microbiome differences between Crohn’s disease patients and healthy individuals, but these differences are not strongly pronounced. The Jaccard metric indicated moderate changes in species presence or absence between groups, while the Unweighted UniFrac suggested that most of these changes involve closely related taxa. The Weighted UniFrac showed substantial overlap, implying that the core microbial community and relative abundances remain largely shared.
+
+Together, these findings indicate that Crohn’s disease may be associated with subtle shifts in microbiome composition, rather than a complete restructuring of the gut microbiota. Detecting stronger signals may require more targeted sampling, deeper sequencing, or integration with clinical and functional data.
+
+
+## Snakemake-QIIME2 workflow conclusion
+
+This project applied a reproducible Snakemake-QIIME2 workflow to explore microbial differences between Crohn’s disease patients and healthy controls using 16S rRNA data. While some variation in microbial composition was observed—particularly in species presence or absence—the overall differences between groups were limited and not strongly defined.
+
+Still, the workflow successfully processed and visualized the data, showing its value for microbiome studies. It can easily be reused with different datasets by updating the input files and metadata, making it a flexible and scalable tool for future analyses.
+
+
+
+
+
+
+
+

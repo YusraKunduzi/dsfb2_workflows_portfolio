@@ -1,0 +1,76 @@
+---
+params:
+  country: "Greece"
+  year: 2022
+  month: 2
+---
+# COVID-19 deaths and cases parameterized
+
+Intro stukje bla bla bla
+
+
+## Obtaining the data and loading the necessary libraries
+
+The data used in the graphs is obtained from the *European Centre for Disease Prevention and Control* under the dataset titled *Data on the daily number of new reported COVID-19 cases and deaths by EU/EEA country*. Please note that the data has not been updated since November 1, 2022.
+
+```{r imports, warning= FALSE, message=FALSE}
+library(readr)
+library(ggplot2)
+library(dplyr)
+
+data <- read.csv("https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv", na.strings = "", fileEncoding = "UTF-8-BOM")
+
+```
+
+
+## Preparing the data
+
+The data is filtered by the parameters chosen by the viewer of the plots.
+
+```{r filtering}
+
+#use paramaters from yaml header
+filtered_data <- data %>%
+  filter(countriesAndTerritories == params$country, year == params$year, month == params$month)
+
+# Fix date format for ggplot
+filtered_data$dateRep <- as.Date(filtered_data$dateRep, format = "%d/%m/%Y")
+
+
+```
+
+## Plotting the COVID-19 death counts by parameters
+
+```{r plot death}
+
+# Plot the death count
+filtered_data %>% 
+  ggplot(aes(x = dateRep, y = deaths)) + 
+  geom_line(color = "darkred", linewidth= 1.5 ) + 
+  theme_classic() + 
+  labs(
+    title = paste("COVID-19 Deaths in", params$country, "(", params$month, "/", params$year, ")"),
+    x = "Date",
+    y = "Number of Deaths"
+  ) + #Rotating the axis a little for better visualization
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+## Plotting the COVID-19 cases by parameters*
+
+```{r plot cases}
+
+# Plot the case count
+filtered_data %>% 
+  ggplot(aes(x = dateRep, y = cases)) + 
+  geom_line(color = "orange", linewidth = 1.5) + 
+  theme_bw() + 
+  labs(
+    title = paste("COVID-19 cases in", params$country, "(", params$month, "/", params$year, ")"),
+    x = "Date",
+    y = "Number of cases"
+  ) + #Rotating the axis a little for better visualization
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```

@@ -4,34 +4,33 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>11 References | verander strakjes</title>
-  <meta name="description" content="11 References | verander strakjes" />
+  <title>10 vibes vibes | verander strakjes</title>
+  <meta name="description" content="10 vibes vibes | verander strakjes" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="11 References | verander strakjes" />
+  <meta property="og:title" content="10 vibes vibes | verander strakjes" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="11 References | verander strakjes" />
+  <meta name="twitter:title" content="10 vibes vibes | verander strakjes" />
   
   
   
 
-<meta name="author" content="Yusra Kunduzi" />
 
 
-<meta name="date" content="2025-05-19" />
+<meta name="date" content="2025-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="covid-19-deaths-and-cases-parameterized.html"/>
-
+<link rel="prev" href="project---rshiny-app.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -175,13 +174,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8" data-path="new-rpackage.html"><a href="new-rpackage.html"><i class="fa fa-check"></i><b>8</b> New Rpackage</a></li>
 <li class="chapter" data-level="9" data-path="project---rshiny-app.html"><a href="project---rshiny-app.html"><i class="fa fa-check"></i><b>9</b> Project - Rshiny app</a></li>
-<li class="chapter" data-level="10" data-path="covid-19-deaths-and-cases-parameterized.html"><a href="covid-19-deaths-and-cases-parameterized.html"><i class="fa fa-check"></i><b>10</b> COVID-19 deaths and cases parameterized</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="covid-19-deaths-and-cases-parameterized.html"><a href="covid-19-deaths-and-cases-parameterized.html#obtaining-the-data-and-loading-the-necessary-libraries"><i class="fa fa-check"></i><b>10.1</b> Obtaining the data and loading the necessary libraries</a></li>
-<li class="chapter" data-level="10.2" data-path="covid-19-deaths-and-cases-parameterized.html"><a href="covid-19-deaths-and-cases-parameterized.html#preparing-the-data"><i class="fa fa-check"></i><b>10.2</b> Preparing the data</a></li>
-<li class="chapter" data-level="10.3" data-path="covid-19-deaths-and-cases-parameterized.html"><a href="covid-19-deaths-and-cases-parameterized.html#plotting-the-covid-19-death-counts-by-parameters"><i class="fa fa-check"></i><b>10.3</b> Plotting the COVID-19 death counts by parameters</a></li>
-<li class="chapter" data-level="10.4" data-path="covid-19-deaths-and-cases-parameterized.html"><a href="covid-19-deaths-and-cases-parameterized.html#plotting-the-covid-19-cases-by-parameters"><i class="fa fa-check"></i><b>10.4</b> Plotting the COVID-19 cases by parameters*</a></li>
-</ul></li>
+<li class="chapter" data-level="10" data-path="vibes-vibes.html"><a href="vibes-vibes.html"><i class="fa fa-check"></i><b>10</b> vibes vibes</a></li>
 <li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
 </ul>
 
@@ -200,34 +193,46 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">11</span> References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="vibes-vibes" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> vibes vibes<a href="vibes-vibes.html#vibes-vibes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="vibes-vibes.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="vibes-vibes.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="vibes-vibes.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="vibes-vibes.html#cb5-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;ruwe_data/data.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Rows: 28729 Columns: 11</code></pre>
+<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (5): dateRep, countriesAndTerritories, geoId, countryterritoryCode, cont...
+## dbl (6): day, month, year, cases, deaths, popData2020
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="vibes-vibes.html#cb8-1" tabindex="-1"></a>filtered_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="vibes-vibes.html#cb8-2" tabindex="-1"></a>  <span class="fu">filter</span>(countriesAndTerritories <span class="sc">==</span> <span class="st">&quot;Netherlands&quot;</span>, year <span class="sc">==</span> <span class="dv">2020</span>, month <span class="sc">==</span> <span class="dv">8</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="vibes-vibes.html#cb9-1" tabindex="-1"></a>filtered_data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span> day, <span class="at">y=</span> deaths)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="at">color=</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/plot%20death-1.png" width="672" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="vibes-vibes.html#cb10-1" tabindex="-1"></a>filtered_data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span> day, <span class="at">y=</span> cases)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="at">color=</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/plot%20cases-1.png" width="672" /></p>
 
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div class="csl-entry">
-De Respinis, Sophie, Valérie Monnin, Victoria Girard, Martin Welker, Maud Arsac, Béatrice Cellière, Géraldine Durand, et al. 2014. <span>“Matrix-<span>Assisted</span> <span>Laser</span> <span>Desorption</span> <span>Ionization</span>–<span>Time</span> of <span>Flight</span> (<span>MALDI</span>-<span>TOF</span>) <span>Mass</span> <span>Spectrometry</span> <span>Using</span> the <span>Vitek</span> <span>MS</span> <span>System</span> for <span>Rapid</span> and <span>Accurate</span> <span>Identification</span> of <span>Dermatophytes</span> on <span>Solid</span> <span>Cultures</span>.”</span> Edited by Y.-W. Tang. <em>J Clin Microbiol</em> 52 (12): 4286–92. <a href="https://doi.org/10.1128/JCM.02199-14">https://doi.org/10.1128/JCM.02199-14</a>.
-</div>
-<div class="csl-entry">
-Han, Sang-Soo, Young-Su Jeong, and Sun-Kyung Choi. 2021. <span>“Current <span>Scenario</span> and <span>Challenges</span> in the <span>Direct</span> <span>Identification</span> of <span>Microorganisms</span> <span>Using</span> <span>MALDI</span> <span>TOF</span> <span>MS</span>.”</span> <em>Microorganisms</em> 9 (9): 1917. <a href="https://doi.org/10.3390/microorganisms9091917">https://doi.org/10.3390/microorganisms9091917</a>.
-</div>
-<div class="csl-entry">
-Leong, Claudia, Jillian J Haszard, Anne-Louise M Heath, Gerald W Tannock, Blair Lawley, Sonya L Cameron, Ewa A Szymlek-Gay, et al. 2020. <span>“Using Compositional Principal Component Analysis to Describe Children’s Gut Microbiota in Relation to Diet and Body Composition.”</span> <em>The American Journal of Clinical Nutrition</em> 111 (1): 70–78. <a href="https://doi.org/10.1093/ajcn/nqz270">https://doi.org/10.1093/ajcn/nqz270</a>.
-</div>
-<div class="csl-entry">
-Okabe, Tadashi, Kozue Oana, Yoshiyuki Kawakami, Masaru Yamaguchi, Yuko Takahashi, Yukie Okimura, Takayuki Honda, and Tsutomu Katsuyama. 2000. <span>“Limitations of <span>Vitek</span> <span>GPS</span>-418 <span>Cards</span> in <span>Exact</span> <span>Detection</span> of <span>Vancomycin</span>-<span>Resistant</span> <span>Enterococci</span> with the <em>vanB</em> <span>Genotype</span>.”</span> <em>J Clin Microbiol</em> 38 (6): 2409–11. <a href="https://doi.org/10.1128/JCM.38.6.2409-2411.2000">https://doi.org/10.1128/JCM.38.6.2409-2411.2000</a>.
-</div>
-<div class="csl-entry">
-Wallet, Frédéric, Caroline Loïez, Emilie Renaux, Nadine Lemaitre, and René J. Courcol. 2005. <span>“Performances of <span>VITEK</span> 2 Colorimetric Cards for Identification of Gram-Positive and Gram-Negative Bacteria.”</span> <em>J Clin Microbiol</em> 43 (9): 4402–6. <a href="https://doi.org/10.1128/JCM.43.9.4402-4406.2005">https://doi.org/10.1128/JCM.43.9.4402-4406.2005</a>.
-</div>
-</div>
+<hr />
+<p>bibliography: My_Library.bib</p>
+<hr />
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="covid-19-deaths-and-cases-parameterized.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="project---rshiny-app.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

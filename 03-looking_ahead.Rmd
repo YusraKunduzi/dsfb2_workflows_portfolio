@@ -2,9 +2,9 @@
 
 **Where do I want to be in ~2 years time?**
 
-A few months from now, I will graduate from the Life Sciences program at Hogeschool Utrecht. After that, I would like to start working in a laboratory environment, ideally in a research setting focused on microbiology. I'm especially interested in combining practical lab work with data analysis, such as working with NGS data, so I can apply both my experimental and data science skills.
+I’m currently in the final phase of my Life Sciences degree at Hogeschool Utrecht and will be graduating soon. In about two years, I hope to be working in a research-oriented lab environment, ideally in the field of microbiology. I want to be in a position where I can combine hands-on lab work with data analysis, particularly involving next-generation sequencing (NGS), so I can continue building on both my experimental and data science skills.
 
-As far as I can see now, my plan is to work for one or two years to gain more experience and discover what kind of work suits me best. Who knows, during that time I might find a master’s program that really inspires me and decide to continue studying, but for now, my main goal is to start working and developing myself professionally.
+By that time, I aim to have gained valuable experience in the field and a better understanding of what type of work suits me best. If I come across a master’s program that really fits my interests, I might decide to continue studying, but for now, my goal is to focus on growing professionally and learning as much as possible in a real research setting.
 
 ---
 

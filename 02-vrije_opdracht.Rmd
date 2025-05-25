@@ -1,9 +1,9 @@
-# Gut Microbiome Analysis in Crohn’s Disease Using Snakemake and QIIME2
+# Gut Microbiome Analysis in Crohn’s Disease patients Using Snakemake and QIIME2
 
 The human gut microbiome plays an important role in maintaining overall health. It helps with digestion, nutrient absorption, and keeping the immune system balanced. When this microbial balance is disturbed, it can contribute to long-term health problems. One example is Crohn’s disease, a condition in which both the immune system and the gut microbiome appear to be disrupted.
 
 
-To better understand the potential microbial shifts associated with Crohn’s disease, publicly available 16S rRNA sequencing data from the GSE162844 dataset was analyzed. This dataset includes fecal samples from individuals diagnosed with Crohn’s disease as well as healthy controls. The goal of this project was to explore gut microbiome composition and diversity in these two groups using a reproducible workflow built with QIIME2 and Snakemake.
+To better understand the potential microbial shifts associated with Crohn’s disease, publicly available 16S rRNA sequencing data from the GSE162844 dataset was analyzed. This dataset includes ileal mucosal biopsy samples from individuals diagnosed with Crohn’s disease as well as healthy controls. The goal of this project was to explore gut microbiome composition and diversity in these two groups using a reproducible workflow built with QIIME2 and Snakemake.
 
 
 **Snakemake and QIIME2 workflow**
@@ -12,7 +12,7 @@ To better understand the potential microbial shifts associated with Crohn’s di
 Although Snakemake is mainly based on Python, it is very flexible and can work with tools beyond Python code. It can run external programs like QIIME2 by using shell commands. QIIME2 is a popular microbiome analysis platform used to process raw 16S rRNA gene sequencing data, especially for studying microbial diversity. In a Snakemake workflow, each QIIME2 step with its input and output files, can be defined as a separate rule. This setup enables automated and efficient processing of sequencing data, from initial raw data handling to final analysis and identification of microbial species.
 
 
-**Prerequisites**
+**Set up and environment**
 
 This analysis was performed in VS Code using an Ubuntu terminal running through WSL. For the installation of QIIME2, a conda environment was created. Within the same environment, a compatible version of Snakemake was installed. The latest version of QIIME2 is 2025.4, which is compatible with Snakemake version 7.32.4 that runs on Python 3.10.
 
@@ -62,7 +62,7 @@ rule import_data:
         """
 ```
 
-The first code chunk of a Snakefile always contains a rule all. This rule specifies the final target files that the workflow aims to generate. When you run Snakemake, it checks which of these output files already exist and will skip any steps that produce files already present. This makes the workflow more efficient by avoiding unnecessary computations.
+The first code chunk of a Snakefile always contains a 'rule all'. This rule specifies the final target files that the workflow aims to generate. When you run Snakemake, it checks which of these output files already exist and will skip any steps that produce files already present. This makes the workflow more efficient by avoiding unnecessary computations.
 
 Following rule all, the pipeline typically starts with the import_data step, where raw sequencing data is imported into QIIME2’s format. In this case, the input is a manifest file listing paired-end sequence files, and the output is a demultiplexed artifact (demux-paired-end.qza). “Demultiplexed” means the sequences have been separated by sample based on their barcodes, so each sequence is correctly assigned to its original sample.
 
@@ -317,25 +317,25 @@ In this final part, taxonomy is assigned to the cleaned sequences using a traine
 
 ## QIIME2 view
 
-After running the Snakemake workflow, key .qzv visualization files were generated and viewed using QIIME 2 View. These included alpha and beta diversity plots, which help evaluate within-sample diversity and differences between groups, respectively. Because the focus here is on comparing Crohn’s disease samples to healthy controls, beta diversity metrics are the most informative.
+After running the Snakemake workflow, key .qzv visualization files were generated and viewed using QIIME 2 View. These included alpha and beta diversity plots, which help evaluate within-sample diversity and differences between groups. Because the focus here is on comparing Crohn’s disease samples to healthy controls, beta diversity metrics are the most informative.
 
-The Snakemake rule diversity_analysis produces a folder containing various diversity plots. For this dataset, the most relevant visualizations are: jaccard_emperor.qzv, unweighted_unifrac_emperor.qzv, and weighted_unifrac_emperor.qzv. Each plot gives insight into a different aspect of how the microbiome differs between the groups. The Jaccard plot reflects whether the same species are present or absent between groups. The Unweighted UniFrac plot builds on this by also considering the evolutionary relationships between the species. The Weighted UniFrac plot adds information about species abundance, showing how the relative amounts of microbes differ between the groups.
+The Snakemake rule 'diversity_analysis' produces a folder containing various diversity plots. For this dataset, the most relevant visualizations are: jaccard_emperor.qzv, unweighted_unifrac_emperor.qzv, and weighted_unifrac_emperor.qzv. Each plot gives insight into a different aspect of how the microbiome differs between the groups. The Jaccard plot reflects whether the same species are present or absent between groups. The Unweighted UniFrac plot builds on this by also considering the evolutionary relationships between the species. The Weighted UniFrac plot adds information about species abundance, showing how the relative amounts of bacteria differ between the groups.
 
 
 ![Figure 2: Jaccard PCoA plot](~/dsfb2_workflows_portfolio/images/jaccard_plotje.png)
 
 
-The Jaccard PCoA plot shows a clear separation between inflamed (red) and non-inflamed (blue) samples, which means that the types of microbes present in each group are different. Since the Jaccard distance looks only at whether a microbe is present or not, this suggests that inflammation is linked to certain microbes appearing or disappearing. The small amount of overlap between the groups shows that inflammation causes a clear change in which microbes are found.
+The Jaccard PCoA plot shows a clear separation between inflamed (red) and non-inflamed (blue) samples, which means that the types of bacteria present in each group are different. Since the Jaccard distance looks only at whether bacteria are present or not, this suggests that inflammation is linked to certain bacteria appearing or disappearing. The small amount of overlap between the groups shows that inflammation causes a clear change in which bacteria are found.
 
 
 ![Figure 3: Unweighted unifrac PCoA plot](~/dsfb2_workflows_portfolio/images/unweighted.png)
 
-The Unweighted UniFrac plot shows some separation but also overlap between groups. Like Jaccard, it’s based on which microbes are present, but it also includes how closely related those microbes are. The overlap here means that while some species differ between groups, many of them are still closely related
+The Unweighted UniFrac plot shows some separation but also overlap between groups. Like Jaccard, it’s based on which bacteria are present, but it also includes how closely related those bacteria are. The overlap here means that while some species differ between groups, many of them are still closely related
 
 
 ![Figure 4: Weighted unifrac PCoA plot](~/dsfb2_workflows_portfolio/images/weighted.png)
 
-The Weighted UniFrac plot shows the most overlap between inflamed and non-inflamed samples. This means that even though the two groups may differ in which species are present (as shown by the Jaccard plot), they still share many of the same dominant microbes, just in different amounts. 
+The Weighted UniFrac plot shows the most overlap between inflamed and non-inflamed samples. This means that even though the two groups may differ in which species are present (as shown by the Jaccard plot), they still share many of the same dominant bacteria, just in different amounts. 
 
 
 ![Figure 5: taxonomy bar plot](~/dsfb2_workflows_portfolio/images/taxa_plot.png)

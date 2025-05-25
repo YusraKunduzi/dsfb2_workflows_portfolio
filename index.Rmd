@@ -17,5 +17,10 @@ params:
 
 # Introduction
 
-Welcome to my GitHub Pages portfolio! This portfolio is created based on assignments from the Data Science Workflows course and projects from the minor in Data Science for Biology. In this portfolio, you can find a variety of things I’ve learned and created, such as an R package and examples of my usual work in RStudio. Additionally, I’ve completed a mini project using Python, expanding my skill set beyond R. Each project demonstrates the techniques I’ve applied and the workflows I’ve developed, showcasing my growth in data science.
+**Welcome to my GitHub Pages portfolio**
+
+
+This portfolio was created as part of the Data Science Workflows course, which is part of the Data Science for Biology minor. It showcases a variety of skills I’ve developed, including the creation of an R package and examples of my typical work in RStudio.
+
+In addition to my R-based work, I’ve also completed a project using QIIME2 and Snakemake to analyze microbiome sequencing data, which helped me explore the integration of data science with bioinformatics tools. Each project in this portfolio demonstrates the techniques and workflows I've applied, highlighting my growth in data science and my interest in combining biological research with computational analysis.
 

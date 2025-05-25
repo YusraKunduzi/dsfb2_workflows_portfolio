@@ -52,7 +52,7 @@ print(flow_tidy_plot)
 
 ```
 
-*Figure 3: Scatterplot showing the effect of different compounds at various concentrations on C. elegans offspring*
+*Figure 8: Scatterplot showing the effect of different compounds at various concentrations on C. elegans offspring*
 
 
 The concentration of the compounds have a wide range, which isn’t ideal for visualization in the scatterplot. To solve this, the log10 value of compConcentration is used, reducing the distance between data points. Another issue is that compConcentration being of the class 'character' disrupts the order in which the data is displayed.

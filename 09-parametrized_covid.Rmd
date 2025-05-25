@@ -6,7 +6,7 @@ params:
 ---
 # COVID-19 deaths and cases parameterized
 
-Intro stukje bla bla bla
+This report visualizes the number of COVID-19 cases and deaths in a selected European country for a specific month and year, based on parameters defined. By adjusting the country, year, and month parameters, the same report can be reused to explore trends in different regions and time periods.
 
 
 ## Obtaining the data and loading the necessary libraries
@@ -17,6 +17,7 @@ The data used in the graphs is obtained from the *European Centre for Disease Pr
 library(readr)
 library(ggplot2)
 library(dplyr)
+library(plotly)
 
 data <- read.csv("https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv", na.strings = "", fileEncoding = "UTF-8-BOM")
 
@@ -44,7 +45,7 @@ filtered_data$dateRep <- as.Date(filtered_data$dateRep, format = "%d/%m/%Y")
 ```{r plot death}
 
 # Plot the death count
-filtered_data %>% 
+deaths <- filtered_data %>% 
   ggplot(aes(x = dateRep, y = deaths)) + 
   geom_line(color = "darkred", linewidth= 1.5 ) + 
   theme_classic() + 
@@ -55,6 +56,8 @@ filtered_data %>%
   ) + #Rotating the axis a little for better visualization
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
+ggplotly(deaths)
+
 ```
 
 ## Plotting the COVID-19 cases by parameters*
@@ -62,7 +65,7 @@ filtered_data %>%
 ```{r plot cases}
 
 # Plot the case count
-filtered_data %>% 
+cases <- filtered_data %>% 
   ggplot(aes(x = dateRep, y = cases)) + 
   geom_line(color = "orange", linewidth = 1.5) + 
   theme_bw() + 
@@ -72,5 +75,7 @@ filtered_data %>%
     y = "Number of cases"
   ) + #Rotating the axis a little for better visualization
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplotly(cases)
 
 ```
